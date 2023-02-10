@@ -1,0 +1,15 @@
+
+ platform :ios, '13.0'
+
+target 'FinalProject' do
+  
+  use_frameworks!
+
+  # Pods for FinalProject
+  pod 'CLTypingLabel'
+  pod 'lottie-ios'
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
+  pod 'Alamofire'
+
+end
