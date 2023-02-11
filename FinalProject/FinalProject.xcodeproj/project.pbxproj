@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3329287929970D9E0069D6D7 /* FoodAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3329287829970D9E0069D6D7 /* FoodAnswer.swift */; };
+		332928912997158A0069D6D7 /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332928902997158A0069D6D7 /* HomePagePresenter.swift */; };
+		33292893299715B80069D6D7 /* HomePageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33292892299715B80069D6D7 /* HomePageInteractor.swift */; };
+		33292895299715DF0069D6D7 /* HomePageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33292894299715DF0069D6D7 /* HomePageRouter.swift */; };
+		33292897299716090069D6D7 /* ViewToPresenterHomePageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33292896299716090069D6D7 /* ViewToPresenterHomePageProtocol.swift */; };
 		3368396D2996726C0096027B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3368396C2996726C0096027B /* RegisterViewController.swift */; };
 		3368396F299672760096027B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3368396E299672750096027B /* LoginViewController.swift */; };
 		336839712996747B0096027B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336839702996747B0096027B /* WelcomeViewController.swift */; };
@@ -14,7 +19,7 @@
 		33AF2A762996961B00098BF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF2A752996961B00098BF4 /* Constants.swift */; };
 		33AF9B2329961D6300D28269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF9B2229961D6300D28269 /* AppDelegate.swift */; };
 		33AF9B2529961D6300D28269 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF9B2429961D6300D28269 /* SceneDelegate.swift */; };
-		33AF9B2729961D6300D28269 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF9B2629961D6300D28269 /* ViewController.swift */; };
+		33AF9B2729961D6300D28269 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF9B2629961D6300D28269 /* HomePage.swift */; };
 		33AF9B2A29961D6300D28269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AF9B2829961D6300D28269 /* Main.storyboard */; };
 		33AF9B2C29961D6500D28269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AF9B2B29961D6500D28269 /* Assets.xcassets */; };
 		33AF9B2F29961D6500D28269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AF9B2D29961D6500D28269 /* LaunchScreen.storyboard */; };
@@ -32,6 +37,11 @@
 
 /* Begin PBXFileReference section */
 		1A02F04D19FFF7A6F8598273 /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		3329287829970D9E0069D6D7 /* FoodAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAnswer.swift; sourceTree = "<group>"; };
+		332928902997158A0069D6D7 /* HomePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePresenter.swift; sourceTree = "<group>"; };
+		33292892299715B80069D6D7 /* HomePageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageInteractor.swift; sourceTree = "<group>"; };
+		33292894299715DF0069D6D7 /* HomePageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRouter.swift; sourceTree = "<group>"; };
+		33292896299716090069D6D7 /* ViewToPresenterHomePageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToPresenterHomePageProtocol.swift; sourceTree = "<group>"; };
 		3368396C2996726C0096027B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3368396E299672750096027B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		336839702996747B0096027B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +50,7 @@
 		33AF9B1F29961D6300D28269 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AF9B2229961D6300D28269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33AF9B2429961D6300D28269 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		33AF9B2629961D6300D28269 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33AF9B2629961D6300D28269 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		33AF9B2929961D6300D28269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33AF9B2B29961D6500D28269 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33AF9B2E29961D6500D28269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,8 +84,197 @@
 			isa = PBXGroup;
 			children = (
 				33AF9B382996256700D28269 /* Food.swift */,
+				3329287829970D9E0069D6D7 /* FoodAnswer.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		3329287A29970E8C0069D6D7 /* anasayfa-module */ = {
+			isa = PBXGroup;
+			children = (
+				3329287B29970EB10069D6D7 /* collectionview */,
+				3329287C29970EBD0069D6D7 /* protocols */,
+				3329287D29970ECA0069D6D7 /* router */,
+				3329287E29970ED10069D6D7 /* interactor */,
+				3329287F29970ED90069D6D7 /* presenter */,
+				3329288029970EDE0069D6D7 /* view */,
+			);
+			path = "anasayfa-module";
+			sourceTree = "<group>";
+		};
+		3329287B29970EB10069D6D7 /* collectionview */ = {
+			isa = PBXGroup;
+			children = (
+				33AF9B362996240000D28269 /* CollectionViewCell.swift */,
+			);
+			path = collectionview;
+			sourceTree = "<group>";
+		};
+		3329287C29970EBD0069D6D7 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				33292896299716090069D6D7 /* ViewToPresenterHomePageProtocol.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		3329287D29970ECA0069D6D7 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				33292894299715DF0069D6D7 /* HomePageRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		3329287E29970ED10069D6D7 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				33292892299715B80069D6D7 /* HomePageInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		3329287F29970ED90069D6D7 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				332928902997158A0069D6D7 /* HomePagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		3329288029970EDE0069D6D7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				33AF9B2629961D6300D28269 /* HomePage.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3329288129970FD40069D6D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33AF2A752996961B00098BF4 /* Constants.swift */,
+				33AF9B2229961D6300D28269 /* AppDelegate.swift */,
+				33AF9B2429961D6300D28269 /* SceneDelegate.swift */,
+				33AF9B2B29961D6500D28269 /* Assets.xcassets */,
+				33AF9B2D29961D6500D28269 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3329288229970FFF0069D6D7 /* fooddetail-module */ = {
+			isa = PBXGroup;
+			children = (
+				33292888299710870069D6D7 /* tableview */,
+				33292887299710310069D6D7 /* protocols */,
+				332928862997102A0069D6D7 /* router */,
+				33292885299710260069D6D7 /* interactor */,
+				332928842997101F0069D6D7 /* presenter */,
+				33292883299710150069D6D7 /* view */,
+			);
+			path = "fooddetail-module";
+			sourceTree = "<group>";
+		};
+		33292883299710150069D6D7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				33AF9B4129964A2300D28269 /* DetailsViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		332928842997101F0069D6D7 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		33292885299710260069D6D7 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		332928862997102A0069D6D7 /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		33292887299710310069D6D7 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		33292888299710870069D6D7 /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				33AF9B3D2996473200D28269 /* FoodsTableViewCell.swift */,
+			);
+			path = tableview;
+			sourceTree = "<group>";
+		};
+		33292889299710BF0069D6D7 /* foodbasket-module */ = {
+			isa = PBXGroup;
+			children = (
+				3329288E299710F50069D6D7 /* protocols */,
+				3329288D299710E80069D6D7 /* router */,
+				3329288C299710DF0069D6D7 /* interactor */,
+				3329288B299710D80069D6D7 /* presenter */,
+				3329288A299710D30069D6D7 /* view */,
+			);
+			path = "foodbasket-module";
+			sourceTree = "<group>";
+		};
+		3329288A299710D30069D6D7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				33AF9B3F299647CA00D28269 /* FoodTableViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3329288B299710D80069D6D7 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		3329288C299710DF0069D6D7 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		3329288D299710E80069D6D7 /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		3329288E299710F50069D6D7 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		3329288F2997111D0069D6D7 /* onboardingScreens */ = {
+			isa = PBXGroup;
+			children = (
+				3368396C2996726C0096027B /* RegisterViewController.swift */,
+				3368396E299672750096027B /* LoginViewController.swift */,
+				336839702996747B0096027B /* WelcomeViewController.swift */,
+			);
+			path = onboardingScreens;
 			sourceTree = "<group>";
 		};
 		33AF9B1629961D6300D28269 = {
@@ -99,23 +298,15 @@
 		33AF9B2129961D6300D28269 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				33AF9B2229961D6300D28269 /* AppDelegate.swift */,
-				33AF2A752996961B00098BF4 /* Constants.swift */,
-				33AF9B2429961D6300D28269 /* SceneDelegate.swift */,
-				336839702996747B0096027B /* WelcomeViewController.swift */,
-				33AF9B2629961D6300D28269 /* ViewController.swift */,
-				3368396C2996726C0096027B /* RegisterViewController.swift */,
-				3368396E299672750096027B /* LoginViewController.swift */,
-				33AF9B3F299647CA00D28269 /* FoodTableViewController.swift */,
-				33AF9B4129964A2300D28269 /* DetailsViewController.swift */,
-				33AF9B3D2996473200D28269 /* FoodsTableViewCell.swift */,
-				33AF9B362996240000D28269 /* CollectionViewCell.swift */,
-				33AF9B2829961D6300D28269 /* Main.storyboard */,
-				33AF9B2B29961D6500D28269 /* Assets.xcassets */,
-				33AF9B2D29961D6500D28269 /* LaunchScreen.storyboard */,
+				3329288F2997111D0069D6D7 /* onboardingScreens */,
+				3329287A29970E8C0069D6D7 /* anasayfa-module */,
+				33292889299710BF0069D6D7 /* foodbasket-module */,
+				3329288229970FFF0069D6D7 /* fooddetail-module */,
 				33C842D02996862B008AC7E4 /* lottie-files */,
 				3323DE4A299679CF003E325D /* Entity */,
 				33AF9B3A29962D2700D28269 /* Fonts */,
+				3329288129970FD40069D6D7 /* Supporting Files */,
+				33AF9B2829961D6300D28269 /* Main.storyboard */,
 				3390C5F129968DC7003DB0BB /* GoogleService-Info.plist */,
 				33AF9B3029961D6500D28269 /* Info.plist */,
 			);
@@ -175,6 +366,8 @@
 			dependencies = (
 			);
 			name = FinalProject;
+			packageProductDependencies = (
+			);
 			productName = FinalProject;
 			productReference = 33AF9B1F29961D6300D28269 /* FinalProject.app */;
 			productType = "com.apple.product-type.application";
@@ -203,6 +396,8 @@
 				Base,
 			);
 			mainGroup = 33AF9B1629961D6300D28269;
+			packageReferences = (
+			);
 			productRefGroup = 33AF9B2029961D6300D28269 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,16 +472,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3329287929970D9E0069D6D7 /* FoodAnswer.swift in Sources */,
 				3368396D2996726C0096027B /* RegisterViewController.swift in Sources */,
-				33AF9B2729961D6300D28269 /* ViewController.swift in Sources */,
+				332928912997158A0069D6D7 /* HomePagePresenter.swift in Sources */,
+				33AF9B2729961D6300D28269 /* HomePage.swift in Sources */,
 				336839712996747B0096027B /* WelcomeViewController.swift in Sources */,
 				33AF9B3E2996473200D28269 /* FoodsTableViewCell.swift in Sources */,
+				33292895299715DF0069D6D7 /* HomePageRouter.swift in Sources */,
 				33AF9B2329961D6300D28269 /* AppDelegate.swift in Sources */,
 				33AF9B4229964A2300D28269 /* DetailsViewController.swift in Sources */,
 				33AF9B40299647CA00D28269 /* FoodTableViewController.swift in Sources */,
 				33AF9B392996256700D28269 /* Food.swift in Sources */,
 				33AF9B372996240000D28269 /* CollectionViewCell.swift in Sources */,
 				3368396F299672760096027B /* LoginViewController.swift in Sources */,
+				33292897299716090069D6D7 /* ViewToPresenterHomePageProtocol.swift in Sources */,
+				33292893299715B80069D6D7 /* HomePageInteractor.swift in Sources */,
 				33AF9B2529961D6300D28269 /* SceneDelegate.swift in Sources */,
 				33AF2A762996961B00098BF4 /* Constants.swift in Sources */,
 			);

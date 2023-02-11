@@ -695,6 +695,7 @@ PODS:
     - Libuv-gRPC (= 0.0.10)
   - gRPC-Core/Interface (1.44.0)
   - GTMSessionFetcher/Core (3.1.0)
+  - Kingfisher (7.6.0)
   - leveldb-library (1.22.1)
   - Libuv-gRPC (0.0.10):
     - Libuv-gRPC/Implementation (= 0.0.10)
@@ -715,9 +716,12 @@ DEPENDENCIES:
   - CLTypingLabel
   - FirebaseAuth
   - FirebaseFirestore
+  - Kingfisher (~> 7.0)
   - lottie-ios
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
   trunk:
     - abseil
     - Alamofire
@@ -750,12 +754,13 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9675f953ace2b3de7c506039d77be1f2e77a8db2
   gRPC-Core: 943e491cb0d45598b0b0eb9e910c88080369290b
   GTMSessionFetcher: c9e714f7eec91a55641e2bab9f45fd83a219b882
+  Kingfisher: b9bb0cd6907813593db268be80ddb931423c33b2
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   lottie-ios: b3846a9fa8ca1a1a3bebfa256ebe8b6fd4aaaaad
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: 833a7a38bf5a5a60e7e669bca792846ae8ae5859
+PODFILE CHECKSUM: 327a6dd7098a093a5ab1670de41152b54fa7f689
 
 COCOAPODS: 1.11.3

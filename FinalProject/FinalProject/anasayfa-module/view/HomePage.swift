@@ -8,9 +8,11 @@
 import UIKit
 import FirebaseAuth
 import Alamofire
+import Kingfisher
 
-class ViewController: UIViewController {
+class HomePage: UIViewController {
 
+    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
     
     var foods = [Food]()
@@ -18,6 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        searchBar.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -69,7 +72,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return foods.count
     }
@@ -80,7 +83,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let food = foods[indexPath.row]
         
         cell.foodImage.image = UIImage(named: food.yemek_resim_adi!)
-        cell.foodName.text = food.yemek_resim_adi
+        cell.foodName.text = food.yemek_adi
         cell.foodPrice.text = "$\(food.yemek_fiyat!)"
         
         return cell

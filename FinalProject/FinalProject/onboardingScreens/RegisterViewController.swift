@@ -16,7 +16,6 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func registerButtonPressed(_ sender: UIButton) {
@@ -27,9 +26,7 @@ class RegisterViewController: UIViewController {
                     let OKButton = UIAlertAction(title: "OK", style: .default)
                     alert.addAction(OKButton)
                     self.present(alert, animated: true)
-                    print(e.localizedDescription)
                 } else {
-                    //navigate to the MainVc
                     self.performSegue(withIdentifier: K.registerSegue, sender: self)
                 }
             }

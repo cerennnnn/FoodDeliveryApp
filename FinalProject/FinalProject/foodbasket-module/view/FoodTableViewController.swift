@@ -26,50 +26,15 @@ class FoodTableViewController: UIViewController {
         let f8 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
         let f9 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
         let f10 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-        
+
         foods = [f1, f2, f3, f4, f5, f6, f7, f8, f9, f10]
 
         foodTable.delegate = self
         foodTable.dataSource = self
     }
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-     */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
 }
+
+
 // MARK: - Table view data source
 extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,5 +51,24 @@ extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
 //        cell.foodNumberLabel.text = "\(food.yemek_siparis_adet!)"
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let silAction = UIContextualAction(style: .destructive, title: "Sil"){ (contextualAction,view,bool) in
+            let food = self.foods[indexPath.row]
+            
+            let alert = UIAlertController(title: "Dikkat!", message: "\(food.yemek_adi!) silinsin mi ?", preferredStyle: .alert)
+            let iptalAction = UIAlertAction(title: "İptal", style: .cancel)
+            alert.addAction(iptalAction)
+            
+            let evetAction = UIAlertAction(title: "Evet", style: .destructive){ action in
+//                self.anasayfaPresenterNesnesi?.sil(kisi_id: Int(food.sepet_yemek_id!)!)
+            }
+            alert.addAction(evetAction)
+            
+            self.present(alert, animated: true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [silAction])
     }
 }

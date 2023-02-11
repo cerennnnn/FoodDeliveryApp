@@ -23,15 +23,19 @@ class DetailsViewController: UIViewController {
     
     @IBAction func myBasketButton(_ sender: UIButton) {
         performSegue(withIdentifier: K.detailToBasketSegue, sender: self)
-        
     }
     
     @IBAction func addToCardButton(_ sender: UIButton) {
         //MARK: - Add Alert to show animation & say item added.
+        let alert = UIAlertController(title: "!", message: "Added to card1", preferredStyle: .alert)
+        let OKButtom = UIAlertAction(title: "OK", style: .default)
+        
+        alert.addAction(OKButtom)
+        
+        self.present(alert, animated: true)
     }
     
-    
     @IBAction func stepperPressed(_ sender: UIStepper) {
-        print(sender.value)
+        stepperValueLabel.text = "\(Int(sender.value))"
     }
 }
