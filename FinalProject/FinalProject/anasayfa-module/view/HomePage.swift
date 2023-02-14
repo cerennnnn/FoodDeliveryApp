@@ -15,25 +15,20 @@ class HomePage: UIViewController {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
     
-    var foods = [Food]()
+    var foods = [Yemekler]()
+    var homePagePresenterObject: ViewToPresenterHomePageProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        searchBar.delegate = self
+        searchBar.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
         
         navigationItem.hidesBackButton = true
         title = K.title
         
-        let f1 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-        let f2 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-        let f3 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-        let f4 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-        let f5 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-        
-        foods = [f1, f2, f3, f4, f5]
+        HomePageRouter.createModule(ref: self)
         
         //bosluklar
         let tasarim = UICollectionViewFlowLayout()
@@ -46,8 +41,6 @@ class HomePage: UIViewController {
         
         let ekranGenislik = UIScreen.main.bounds.width //ekranin tam genisligi
         let itemGenislik = (ekranGenislik - 40) / 1 //herbir item'in genisligi
-     
-
         
         tasarim.itemSize = CGSize(width: itemGenislik * 0.75, height: itemGenislik * 1.05) //kare olsun
         
@@ -57,7 +50,21 @@ class HomePage: UIViewController {
         appearance.backgroundColor = UIColor(named: K.Colors.backgroundColor)
     
         appearance.titleTextAttributes = [.foregroundColor: UIColor(named: K.Colors.backgroundColor)!, .font: UIFont(name: K.Font.font, size: 18)!]
-
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        homePagePresenterObject?.loadAllFoods()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.detailSegue {
+            if let food = sender as? Yemekler {
+                let gidilecekVC = segue.destination as! DetailsViewController
+                gidilecekVC.food = food
+            }
+        }
     }
 
     @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
@@ -72,6 +79,21 @@ class HomePage: UIViewController {
     
 }
 
+extension HomePage: PresenterToViewHomePageProtocol {
+    func sendFoodToView(foodList: [Yemekler]) {
+        self.foods = foodList
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+}
+
+extension HomePage: UISearchBarDelegate {
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        homePagePresenterObject?.search(searchWord: searchText)
+//    }
+}
+
 extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return foods.count
@@ -84,8 +106,15 @@ extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource {
         
         cell.foodImage.image = UIImage(named: food.yemek_resim_adi!)
         cell.foodName.text = food.yemek_adi
-        cell.foodPrice.text = "$\(food.yemek_fiyat!)"
+        cell.foodPrice.text = "\(food.yemek_fiyat!)₺ "
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let food = foods[indexPath.row]
+        
+        performSegue(withIdentifier: K.detailSegue, sender: food)
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
 }

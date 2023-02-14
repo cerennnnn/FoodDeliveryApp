@@ -18,18 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foH-Lh-zb5">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="290"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YUM YUM " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsO-yK-Irk" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                        <rect key="frame" x="46.666666666666657" y="100" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="1TH-eZ-9wU"/>
+                                            <constraint firstAttribute="width" constant="300" id="PSN-nO-emk"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ezF-nT-Et9"/>
+                                            <constraint firstAttribute="height" constant="50" id="rDt-WB-yd7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="56"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstItem="BsO-yK-Irk" firstAttribute="centerX" secondItem="foH-Lh-zb5" secondAttribute="centerX" id="YEf-X3-kWv"/>
+                                    <constraint firstItem="BsO-yK-Irk" firstAttribute="top" secondItem="foH-Lh-zb5" secondAttribute="top" constant="100" id="ZuI-Jn-Akc"/>
+                                    <constraint firstAttribute="width" constant="393" id="b0l-VW-apF"/>
+                                    <constraint firstAttribute="height" constant="290" id="qSW-Fz-KXp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pus-bG-nod" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="303" width="393" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="3eG-SH-9k3"/>
+                                    <constraint firstAttribute="height" constant="300" id="v2S-jD-eJo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="welcome-lottie"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="0OH-gj-VLY">
                                 <rect key="frame" x="40" y="674" width="313" height="124"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wms-5R-d73">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="45"/>
-                                        <color key="backgroundColor" name="buttonBackgroundColor"/>
+                                        <color key="backgroundColor" name="registerButtonBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="m9g-cq-zsN"/>
                                         </constraints>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Register">
-                                            <color key="baseForegroundColor" name="anchorColor"/>
+                                            <color key="baseForegroundColor" name="registerButtonForegroundColor"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
@@ -40,13 +76,13 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyW-om-bno">
                                         <rect key="frame" x="0.0" y="79" width="313" height="45"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="loginButtonBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Pva-fs-fIE"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login">
-                                            <color key="baseForegroundColor" name="buttonBackgroundColor"/>
+                                            <color key="baseForegroundColor" name="loginButtonForegroundColor"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
@@ -57,41 +93,25 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yum Yum " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsO-yK-Irk" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="30" y="123" width="333" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1tt-mE-Eh3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" name="viewBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pus-bG-nod" customClass="LottieAnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="203" width="393" height="421"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="welcome-lottie"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BsO-yK-Irk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="DFz-Cq-dkV"/>
-                            <constraint firstItem="Pus-bG-nod" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E1n-i7-Axy"/>
-                            <constraint firstItem="Pus-bG-nod" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GEH-FQ-YrJ"/>
+                            <constraint firstItem="foH-Lh-zb5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BaP-lF-UDh"/>
+                            <constraint firstItem="Pus-bG-nod" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TJ7-L3-4g7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0OH-gj-VLY" secondAttribute="bottom" constant="20" id="Ua5-lw-BbG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0OH-gj-VLY" secondAttribute="trailing" constant="40" id="XDf-KM-TIa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BsO-yK-Irk" secondAttribute="trailing" constant="30" id="kIN-bG-bGC"/>
                             <constraint firstItem="0OH-gj-VLY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="knA-eD-ktd"/>
-                            <constraint firstItem="BsO-yK-Irk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="phu-zs-khP"/>
-                            <constraint firstItem="0OH-gj-VLY" firstAttribute="top" secondItem="Pus-bG-nod" secondAttribute="bottom" constant="50" id="uFu-tA-65K"/>
-                            <constraint firstItem="Pus-bG-nod" firstAttribute="top" secondItem="BsO-yK-Irk" secondAttribute="bottom" constant="30" id="zqE-3b-0CY"/>
+                            <constraint firstItem="Pus-bG-nod" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lGp-xw-CTN"/>
+                            <constraint firstItem="foH-Lh-zb5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nt1-aY-kiN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="foH-Lh-zb5" secondAttribute="trailing" id="y9P-F7-ZHj"/>
+                            <constraint firstItem="Pus-bG-nod" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="ysM-ef-Obe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sVG-QV-Qzg"/>
                     <connections>
                         <outlet property="animationView" destination="Pus-bG-nod" id="Km7-Vd-gPg"/>
+                        <outlet property="welcomeView" destination="foH-Lh-zb5" id="nxz-2i-it2"/>
                         <outlet property="yumyumLabel" destination="BsO-yK-Irk" id="6FW-jA-hDH"/>
                     </connections>
                 </viewController>
@@ -117,14 +137,14 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vS-zb-jci">
                                 <rect key="frame" x="46.666666666666657" y="723" width="300" height="45"/>
-                                <color key="backgroundColor" name="buttonBackgroundColor"/>
+                                <color key="backgroundColor" name="registerButtonBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="XHj-Br-Mkg"/>
                                     <constraint firstAttribute="height" constant="45" id="zkN-LR-O50"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Register">
-                                    <color key="baseForegroundColor" name="anchorColor"/>
+                                    <color key="baseForegroundColor" name="registerButtonForegroundColor"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
@@ -172,6 +192,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Aep-om-UWS"/>
                     <connections>
+                        <outlet property="animationView" destination="UD5-Fc-IZB" id="69X-zC-GaD"/>
                         <outlet property="emailTextField" destination="VaB-BB-3KF" id="Y5m-DG-f2n"/>
                         <outlet property="passwordTextField" destination="TTJ-fY-zpM" id="5ig-Lx-c8H"/>
                         <segue destination="bXT-AL-AtE" kind="show" identifier="registerToMainSegue" id="W4J-G0-SQ8"/>
@@ -365,31 +386,32 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noodle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUU-Q9-yse">
-                                        <rect key="frame" x="169.33333333333334" y="226.66666666666669" width="54.666666666666657" height="20.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="157.66666666666666" y="217" width="78" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Jw7-op-w8e">
                                         <rect key="frame" x="40" y="429" width="313" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$7.50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUx-nm-mf0">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.50₺" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUx-nm-mf0">
                                                 <rect key="frame" x="0.0" y="0.0" width="133" height="50"/>
                                                 <color key="backgroundColor" name="backgroundColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVC-7o-vsI">
                                                 <rect key="frame" x="163" y="0.0" width="150" height="50"/>
-                                                <color key="backgroundColor" name="buttonBackgroundColor"/>
+                                                <color key="backgroundColor" name="loginButtonBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="JDr-PE-4sM"/>
                                                     <constraint firstAttribute="height" constant="50" id="a18-ms-mj5"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Add to Card">
-                                                    <color key="baseForegroundColor" name="anchorColor"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                                    <color key="baseForegroundColor" name="loginButtonForegroundColor"/>
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
@@ -444,7 +466,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Noodles" id="O6o-3d-f43">
                         <barButtonItem key="rightBarButtonItem" title="My Basket" id="D1C-w3-S8X">
-                            <color key="tintColor" name="backgroundColor"/>
+                            <color key="tintColor" name="loginButtonBackgroundColor"/>
                             <connections>
                                 <action selector="myBasketButton:" destination="mUZ-WB-k6Z" id="VG8-iP-ii3"/>
                                 <segue destination="u2S-5Z-1w6" kind="presentation" identifier="detailToBasketSegue" id="9K0-ra-nWP"/>
@@ -492,19 +514,19 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="PFY-GK-q8C">
                                                     <rect key="frame" x="150" y="55.666666666666657" width="193" height="89"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noodles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQc-LK-oHk">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Noodles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQc-LK-oHk">
                                                             <rect key="frame" x="0.0" y="0.0" width="63.333333333333336" height="20.333333333333332"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$7.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTh-wx-WAF">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$7.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTh-wx-WAF">
                                                             <rect key="frame" x="0.0" y="34.333333333333336" width="42.333333333333336" height="20.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R34-dK-PVa">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R34-dK-PVa">
                                                             <rect key="frame" x="0.0" y="68.666666666666657" width="10" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -578,14 +600,14 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vk-kd-BBY">
                                 <rect key="frame" x="46.666666666666657" y="723" width="300" height="45"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="loginButtonBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="uXJ-Pv-eyi"/>
                                     <constraint firstAttribute="height" constant="45" id="ukK-Fy-Bdh"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login">
-                                    <color key="baseForegroundColor" name="buttonBackgroundColor"/>
+                                    <color key="baseForegroundColor" name="loginButtonForegroundColor"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
@@ -638,6 +660,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="rDr-80-cs7"/>
                     <connections>
+                        <outlet property="animationView" destination="T2g-MS-Ntf" id="zaD-jc-iKD"/>
                         <outlet property="emailTextField" destination="5es-xJ-DH3" id="ak7-KG-Uxv"/>
                         <outlet property="passwordTextField" destination="P8d-eG-eyc" id="dvc-r4-LHo"/>
                     </connections>
@@ -682,13 +705,25 @@
             <color red="0.42699998617172241" green="0.42699998617172241" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="backgroundColor">
-            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonBackgroundColor">
             <color red="0.10599999874830246" green="0.10599999874830246" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="cellBackgroundColor">
             <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="loginButtonBackgroundColor">
+            <color red="1" green="0.79607843137254897" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="loginButtonForegroundColor">
+            <color red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="registerButtonBackgroundColor">
+            <color red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="registerButtonForegroundColor">
+            <color red="0.99607843137254903" green="0.8784313725490196" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textColor">
             <color red="0.25900000333786011" green="0.25900000333786011" blue="0.25900000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -698,6 +733,12 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

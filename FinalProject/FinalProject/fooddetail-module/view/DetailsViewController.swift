@@ -15,6 +15,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet var stepper: UIStepper!
     @IBOutlet var stepperValueLabel: UILabel!
     
+    var food: Yemekler?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

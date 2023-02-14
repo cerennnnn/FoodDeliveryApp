@@ -7,15 +7,22 @@
 
 import UIKit
 import FirebaseAuth
+import Lottie
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet var animationView: LottieAnimationView!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.animationSpeed = 0.5
+        animationView.play()
     }
 
     @IBAction func registerButtonPressed(_ sender: UIButton) {
