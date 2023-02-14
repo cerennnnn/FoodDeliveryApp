@@ -11,7 +11,7 @@
 		332928912997158A0069D6D7 /* AnasayfaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332928902997158A0069D6D7 /* AnasayfaPresenter.swift */; };
 		33292893299715B80069D6D7 /* HomePageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33292892299715B80069D6D7 /* HomePageInteractor.swift */; };
 		33292895299715DF0069D6D7 /* HomePageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33292894299715DF0069D6D7 /* HomePageRouter.swift */; };
-		33292897299716090069D6D7 /* ViewToPresenterAnasayfaProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33292896299716090069D6D7 /* ViewToPresenterAnasayfaProtocol.swift */; };
+		33292897299716090069D6D7 /* HomePageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33292896299716090069D6D7 /* HomePageProtocols.swift */; };
 		335E55C7299AC02B00044E8B /* welcome-lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 335E55C6299AC02B00044E8B /* welcome-lottie.json */; };
 		3368396D2996726C0096027B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3368396C2996726C0096027B /* RegisterViewController.swift */; };
 		3368396F299672760096027B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3368396E299672750096027B /* LoginViewController.swift */; };
@@ -32,6 +32,10 @@
 		33AF9B3E2996473200D28269 /* FoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF9B3D2996473200D28269 /* FoodsTableViewCell.swift */; };
 		33AF9B40299647CA00D28269 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF9B3F299647CA00D28269 /* FoodTableViewController.swift */; };
 		33AF9B4229964A2300D28269 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF9B4129964A2300D28269 /* DetailsViewController.swift */; };
+		33EAEC73299B6FAC00250820 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAEC72299B6FAC00250820 /* DetailsRouter.swift */; };
+		33EAEC75299B6FB600250820 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAEC74299B6FB600250820 /* DetailsInteractor.swift */; };
+		33EAEC77299B6FBF00250820 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAEC76299B6FBF00250820 /* DetailsPresenter.swift */; };
+		33EAEC79299B6FED00250820 /* DetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAEC78299B6FED00250820 /* DetailsProtocol.swift */; };
 		E17585B070CCABAED6A1E5A2 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AC718D0DCB764AF4436D7C /* Pods_FinalProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +45,7 @@
 		332928902997158A0069D6D7 /* AnasayfaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaPresenter.swift; sourceTree = "<group>"; };
 		33292892299715B80069D6D7 /* HomePageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageInteractor.swift; sourceTree = "<group>"; };
 		33292894299715DF0069D6D7 /* HomePageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRouter.swift; sourceTree = "<group>"; };
-		33292896299716090069D6D7 /* ViewToPresenterAnasayfaProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToPresenterAnasayfaProtocol.swift; sourceTree = "<group>"; };
+		33292896299716090069D6D7 /* HomePageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageProtocols.swift; sourceTree = "<group>"; };
 		335E55C6299AC02B00044E8B /* welcome-lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "welcome-lottie.json"; sourceTree = "<group>"; };
 		3368396C2996726C0096027B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3368396E299672750096027B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +68,12 @@
 		33AF9B3D2996473200D28269 /* FoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsTableViewCell.swift; sourceTree = "<group>"; };
 		33AF9B3F299647CA00D28269 /* FoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 		33AF9B4129964A2300D28269 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		33EAEC72299B6FAC00250820 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		33EAEC74299B6FB600250820 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		33EAEC76299B6FBF00250820 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		33EAEC78299B6FED00250820 /* DetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsProtocol.swift; sourceTree = "<group>"; };
+		33EAEC7C299BA8DF00250820 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		33EAEC7D299BA8DF00250820 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		67AC718D0DCB764AF4436D7C /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA2C3EE077572753FF222D4 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,7 +123,7 @@
 		3329287C29970EBD0069D6D7 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
-				33292896299716090069D6D7 /* ViewToPresenterAnasayfaProtocol.swift */,
+				33292896299716090069D6D7 /* HomePageProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -186,6 +196,7 @@
 		332928842997101F0069D6D7 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				33EAEC76299B6FBF00250820 /* DetailsPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 		33292885299710260069D6D7 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				33EAEC74299B6FB600250820 /* DetailsInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -200,6 +212,7 @@
 		332928862997102A0069D6D7 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				33EAEC72299B6FAC00250820 /* DetailsRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -207,6 +220,7 @@
 		33292887299710310069D6D7 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				33EAEC78299B6FED00250820 /* DetailsProtocol.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -394,6 +408,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 33AF9B1629961D6300D28269;
 			packageReferences = (
@@ -478,14 +493,18 @@
 				33AF9B2729961D6300D28269 /* HomePage.swift in Sources */,
 				336839712996747B0096027B /* WelcomeViewController.swift in Sources */,
 				33AF9B3E2996473200D28269 /* FoodsTableViewCell.swift in Sources */,
+				33EAEC75299B6FB600250820 /* DetailsInteractor.swift in Sources */,
+				33EAEC77299B6FBF00250820 /* DetailsPresenter.swift in Sources */,
 				33292895299715DF0069D6D7 /* HomePageRouter.swift in Sources */,
+				33EAEC73299B6FAC00250820 /* DetailsRouter.swift in Sources */,
 				33AF9B2329961D6300D28269 /* AppDelegate.swift in Sources */,
 				33AF9B4229964A2300D28269 /* DetailsViewController.swift in Sources */,
 				33AF9B40299647CA00D28269 /* FoodTableViewController.swift in Sources */,
 				33AF9B392996256700D28269 /* Food.swift in Sources */,
 				33AF9B372996240000D28269 /* CollectionViewCell.swift in Sources */,
 				3368396F299672760096027B /* LoginViewController.swift in Sources */,
-				33292897299716090069D6D7 /* ViewToPresenterAnasayfaProtocol.swift in Sources */,
+				33292897299716090069D6D7 /* HomePageProtocols.swift in Sources */,
+				33EAEC79299B6FED00250820 /* DetailsProtocol.swift in Sources */,
 				33292893299715B80069D6D7 /* HomePageInteractor.swift in Sources */,
 				33AF9B2529961D6300D28269 /* SceneDelegate.swift in Sources */,
 				33AF2A762996961B00098BF4 /* Constants.swift in Sources */,
@@ -499,6 +518,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				33AF9B2929961D6300D28269 /* Base */,
+				33EAEC7D299BA8DF00250820 /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -507,6 +527,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				33AF9B2E29961D6500D28269 /* Base */,
+				33EAEC7C299BA8DF00250820 /* tr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -518,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -578,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

@@ -13,4 +13,5 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet var foodPrice: UILabel!
     @IBOutlet var foodName: UILabel!
     @IBOutlet var foodImage: UIImageView!
+    
 }

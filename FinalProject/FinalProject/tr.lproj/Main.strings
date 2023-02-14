@@ -1,0 +1,108 @@
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "0Vk-kd-BBY"; */
+"0Vk-kd-BBY.configuration.title" = "Giriş Yap";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0Vk-kd-BBY"; */
+"0Vk-kd-BBY.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "5es-xJ-DH3"; */
+"5es-xJ-DH3.placeholder" = "Email";
+
+/* Class = "UITextField"; text = "ceren@gmail.com"; ObjectID = "5es-xJ-DH3"; */
+"5es-xJ-DH3.text" = "ceren@gmail.com";
+
+/* Class = "UILabel"; text = "Hi, James!"; ObjectID = "7HZ-SV-Ah7"; */
+"7HZ-SV-Ah7.text" = "Merhaba, Ceren!";
+
+/* Class = "UIButton"; configuration.title = "Register"; ObjectID = "8vS-zb-jci"; */
+"8vS-zb-jci.configuration.title" = "Kayıt Ol";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8vS-zb-jci"; */
+"8vS-zb-jci.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "See Details"; ObjectID = "AZb-5v-yLL"; */
+"AZb-5v-yLL.text" = "Daha fazla...";
+
+/* Class = "UILabel"; text = "YUM YUM "; ObjectID = "BsO-yK-Irk"; */
+"BsO-yK-Irk.text" = "YUM YUM ";
+
+/* Class = "UIBarButtonItem"; title = "My Basket"; ObjectID = "D1C-w3-S8X"; */
+"D1C-w3-S8X.title" = "Sepetim";
+
+/* Class = "UILabel"; text = "7.50₺"; ObjectID = "GUx-nm-mf0"; */
+"GUx-nm-mf0.text" = "7.50₺";
+
+/* Class = "UINavigationItem"; title = "Noodles"; ObjectID = "O6o-3d-f43"; */
+"O6o-3d-f43.title" = "Noodle";
+
+/* Class = "UILabel"; text = "Noodle"; ObjectID = "OUU-Q9-yse"; */
+"OUU-Q9-yse.text" = "Noodle";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "P8d-eG-eyc"; */
+"P8d-eG-eyc.placeholder" = "Şifre";
+
+/* Class = "UITextField"; text = "123456"; ObjectID = "P8d-eG-eyc"; */
+"P8d-eG-eyc.text" = "123456";
+
+/* Class = "UILabel"; text = "Noodles"; ObjectID = "PTV-sj-ste"; */
+"PTV-sj-ste.text" = "Noodle";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "R34-dK-PVa"; */
+"R34-dK-PVa.text" = "2";
+
+/* Class = "UILabel"; text = "Noodles"; ObjectID = "RQc-LK-oHk"; */
+"RQc-LK-oHk.text" = "Ayran";
+
+/* Class = "UILabel"; text = "Spesials"; ObjectID = "S7d-W0-stP"; */
+"S7d-W0-stP.text" = "Ürünler";
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "SMQ-UK-3bQ"; */
+"SMQ-UK-3bQ.placeholder" = "Ara";
+
+/* Class = "UILabel"; text = "$ 7.5"; ObjectID = "SeY-6E-Sc2"; */
+"SeY-6E-Sc2.text" = "3 ₺";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "TTJ-fY-zpM"; */
+"TTJ-fY-zpM.placeholder" = "Şifre";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "VaB-BB-3KF"; */
+"VaB-BB-3KF.placeholder" = "E posta";
+
+/* Class = "UIButton"; configuration.title = "Register"; ObjectID = "Wms-5R-d73"; */
+"Wms-5R-d73.configuration.title" = "Kayıt ol";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Wms-5R-d73"; */
+"Wms-5R-d73.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "aHh-Qr-qKY"; */
+"aHh-Qr-qKY.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "dyW-om-bno"; */
+"dyW-om-bno.configuration.title" = "Giriş Yap";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dyW-om-bno"; */
+"dyW-om-bno.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "$7.50"; ObjectID = "fTh-wx-WAF"; */
+"fTh-wx-WAF.text" = "7.50 ₺";
+
+/* Class = "UILabel"; text = "Total: "; ObjectID = "iur-Hu-5eK"; */
+"iur-Hu-5eK.text" = "Toplam: ";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "j9h-a6-uju"; */
+"j9h-a6-uju.text" = "1";
+
+/* Class = "UIBarButtonItem"; title = "Log Out"; ObjectID = "qX2-BY-3XJ"; */
+"qX2-BY-3XJ.title" = "Çıkıs Yap";
+
+/* Class = "UILabel"; text = "$ 21.50"; ObjectID = "rt8-1p-fQt"; */
+"rt8-1p-fQt.text" = "21.50 ₺";
+
+/* Class = "UIButton"; configuration.title = "Add to Card"; ObjectID = "vVC-7o-vsI"; */
+"vVC-7o-vsI.configuration.title" = "Sepete Ekle";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vVC-7o-vsI"; */
+"vVC-7o-vsI.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "What do you wanna order today ?"; ObjectID = "xY2-i6-9ry"; */
+"xY2-i6-9ry.text" = "Bugün ne sipariş etmek istersin ?";

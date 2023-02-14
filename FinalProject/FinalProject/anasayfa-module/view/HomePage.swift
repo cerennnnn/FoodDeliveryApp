@@ -11,7 +11,7 @@ import Alamofire
 import Kingfisher
 
 class HomePage: UIViewController {
-
+    
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
     
@@ -48,7 +48,7 @@ class HomePage: UIViewController {
         
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = UIColor(named: K.Colors.backgroundColor)
-    
+        
         appearance.titleTextAttributes = [.foregroundColor: UIColor(named: K.Colors.backgroundColor)!, .font: UIFont(name: K.Font.font, size: 18)!]
         
         
@@ -66,16 +66,22 @@ class HomePage: UIViewController {
             }
         }
     }
-
+    
     @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
         let firebaseAuth = Auth.auth()
-    do {
-      try firebaseAuth.signOut()
-        navigationController?.popToRootViewController(animated: true)
-    } catch {
-        print(error.localizedDescription)
+        do {
+            try firebaseAuth.signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
+    
+    @IBAction func seeDetailsButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: K.detailSegue, sender: foods)
+        //butona basilinca dogru verilerle gonderme yap
     }
+    
     
 }
 
@@ -89,9 +95,9 @@ extension HomePage: PresenterToViewHomePageProtocol {
 }
 
 extension HomePage: UISearchBarDelegate {
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        homePagePresenterObject?.search(searchWord: searchText)
-//    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        homePagePresenterObject?.search(searchWord: searchText)
+    }
 }
 
 extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -103,10 +109,11 @@ extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.collectionCell, for: indexPath) as! CollectionViewCell
         
         let food = foods[indexPath.row]
-        
-        cell.foodImage.image = UIImage(named: food.yemek_resim_adi!)
+//        http://kasimadalan.pe.hu/yemekler/resimler/ayran.png
+        cell.foodImage.kf.indicatorType = .activity
         cell.foodName.text = food.yemek_adi
         cell.foodPrice.text = "\(food.yemek_fiyat!)₺ "
+        cell.foodImage.kf.setImage(with: URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
         
         return cell
     }
