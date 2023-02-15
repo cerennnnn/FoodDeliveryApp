@@ -15,19 +15,6 @@ class FoodTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let f1 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-//        let f2 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-//        let f3 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-//        let f4 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-//        let f5 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-//        let f6 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-//        let f7 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-//        let f8 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-//        let f9 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-//        let f10 = Food(yemek_adi: "chicken", yemek_resim_adi: "chicken", yemek_fiyat: Int(7.50))
-//
-//        foods = [f1, f2, f3, f4, f5, f6, f7, f8, f9, f10]
 
         foodTable.delegate = self
         foodTable.dataSource = self

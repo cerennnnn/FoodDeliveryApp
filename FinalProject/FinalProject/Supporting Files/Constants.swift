@@ -14,7 +14,7 @@ struct K {
     static let detailToBasketSegue = "detailToBasketSegue"
     static let tableCell = "tableCell"
     static let collectionCell = "collectionCell"
-    static let title = "Yumyum 🍔🍕🍰"
+    static let title = "Yumyum"
     
     struct Colors {
         static let backgroundColor = "backgroundColor"

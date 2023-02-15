@@ -28,21 +28,19 @@ class HomePage: UIViewController {
         navigationItem.hidesBackButton = true
         title = K.title
         
-        HomePageRouter.createModule(ref: self)
-        
         //bosluklar
         let tasarim = UICollectionViewFlowLayout()
-        tasarim.scrollDirection = .horizontal
-        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15) //yanlardaki bosluklar
-        tasarim.minimumInteritemSpacing = 15 //kutucuklar arasi bosluk
-        tasarim.minimumLineSpacing = 15 //dikeydeki bosluk
+        tasarim.scrollDirection = .vertical
+        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10) //yanlardaki bosluklar
+        tasarim.minimumInteritemSpacing = 10 //kutucuklar arasi bosluk
+        tasarim.minimumLineSpacing = 10 //dikeydeki bosluk
         
         collectionView.backgroundColor = UIColor(named: K.Colors.backgroundColor)
         
         let ekranGenislik = UIScreen.main.bounds.width //ekranin tam genisligi
-        let itemGenislik = (ekranGenislik - 40) / 1 //herbir item'in genisligi
+        let itemGenislik = (ekranGenislik - 40) / 2 //herbir item'in genisligi
         
-        tasarim.itemSize = CGSize(width: itemGenislik * 0.75, height: itemGenislik * 1.05) //kare olsun
+        tasarim.itemSize = CGSize(width: itemGenislik * 1, height: itemGenislik * 1) //kare olsun
         
         collectionView.collectionViewLayout = tasarim
         
@@ -51,7 +49,7 @@ class HomePage: UIViewController {
         
         appearance.titleTextAttributes = [.foregroundColor: UIColor(named: K.Colors.backgroundColor)!, .font: UIFont(name: K.Font.font, size: 18)!]
         
-        
+        HomePageRouter.createModule(ref: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,8 +79,6 @@ class HomePage: UIViewController {
         performSegue(withIdentifier: K.detailSegue, sender: foods)
         //butona basilinca dogru verilerle gonderme yap
     }
-    
-    
 }
 
 extension HomePage: PresenterToViewHomePageProtocol {
@@ -97,6 +93,9 @@ extension HomePage: PresenterToViewHomePageProtocol {
 extension HomePage: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         homePagePresenterObject?.search(searchWord: searchText)
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
 }
 
@@ -107,12 +106,11 @@ extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.collectionCell, for: indexPath) as! CollectionViewCell
-        
         let food = foods[indexPath.row]
-//        http://kasimadalan.pe.hu/yemekler/resimler/ayran.png
+
         cell.foodImage.kf.indicatorType = .activity
         cell.foodName.text = food.yemek_adi
-        cell.foodPrice.text = "\(food.yemek_fiyat!)₺ "
+//        cell.foodPrice.text = "\(food.yemek_fiyat!)₺ "
         cell.foodImage.kf.setImage(with: URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
         
         return cell
