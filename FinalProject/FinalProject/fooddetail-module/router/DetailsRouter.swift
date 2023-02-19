@@ -9,6 +9,7 @@ import Foundation
 
 class DetailsRouter: PresenterToRouterFoodDetailsProtocol {
     static func createModule(ref: DetailsViewController) {
-        
+        ref.detailsPresenterObject = DetailsPresenter()
+        ref.detailsPresenterObject?.foodDetailsInteractor = DetailsInteractor()
     }
 }

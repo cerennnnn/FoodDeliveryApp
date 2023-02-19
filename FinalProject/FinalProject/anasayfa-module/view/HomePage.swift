@@ -31,14 +31,14 @@ class HomePage: UIViewController {
         //bosluklar
         let tasarim = UICollectionViewFlowLayout()
         tasarim.scrollDirection = .vertical
-        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10) //yanlardaki bosluklar
+        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15) //yanlardaki bosluklar
         tasarim.minimumInteritemSpacing = 10 //kutucuklar arasi bosluk
         tasarim.minimumLineSpacing = 10 //dikeydeki bosluk
         
         collectionView.backgroundColor = UIColor(named: K.Colors.backgroundColor)
         
         let ekranGenislik = UIScreen.main.bounds.width //ekranin tam genisligi
-        let itemGenislik = (ekranGenislik - 40) / 2 //herbir item'in genisligi
+        let itemGenislik = (ekranGenislik - 45) / 2 //herbir item'in genisligi
         
         tasarim.itemSize = CGSize(width: itemGenislik * 1, height: itemGenislik * 1) //kare olsun
         
@@ -74,11 +74,6 @@ class HomePage: UIViewController {
             print(error.localizedDescription)
         }
     }
-    
-    @IBAction func seeDetailsButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: K.detailSegue, sender: foods)
-        //butona basilinca dogru verilerle gonderme yap
-    }
 }
 
 extension HomePage: PresenterToViewHomePageProtocol {
@@ -93,9 +88,6 @@ extension HomePage: PresenterToViewHomePageProtocol {
 extension HomePage: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         homePagePresenterObject?.search(searchWord: searchText)
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-        }
     }
 }
 

@@ -9,22 +9,21 @@ import Foundation
 import Alamofire
 
 class DetailsInteractor: PresenterToInteractorFoodDetailsProtocol {
-    func update(yemek_id: String, yemek_adi: String, yemek_fiyat: String) {
-        let params = ["yemek_id": yemek_id, "yemek_adi": yemek_adi,"yemek_fiyat":yemek_fiyat] as [String : Any]
+    func addToCard(yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: Int, yemek_siparis_adet: Int, kullanici_adi: String) {
+        let params = ["yemek_adi": yemek_adi, "yemek_resim_adi": yemek_resim_adi, "yemek_fiyat": yemek_fiyat, "yemek_siparis_adet": yemek_siparis_adet, "kullanici_adi": kullanici_adi] as [String: Any]
         
-        AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php",method: .post,parameters: params).response { response in
+        AF.request("http://kasimadalan.pe.hu/yemekler/sepeteYemekEkle.php", method: .post, parameters: params).response { response in
             if let data = response.data {
                 do {
                     let cevap = try JSONDecoder().decode(FoodsResponse.self, from: data)
-                    print("-------UPDATE--------")
-                    print("Başarı : \(cevap.success!)")
-                    print("Mesaj  : \(cevap.yemekler!)")
-                } catch{
+                    print("Siparis sepete eklendi!")
+                } catch {
                     print(error.localizedDescription)
                 }
             }
         }
     }
     
+  
     
 }

@@ -16,6 +16,8 @@
 		3368396D2996726C0096027B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3368396C2996726C0096027B /* RegisterViewController.swift */; };
 		3368396F299672760096027B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3368396E299672750096027B /* LoginViewController.swift */; };
 		336839712996747B0096027B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336839702996747B0096027B /* WelcomeViewController.swift */; };
+		3390002929A043BB00C7E240 /* FoodOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3390002829A043BB00C7E240 /* FoodOrders.swift */; };
+		3390002B29A044BC00C7E240 /* FoodOrdersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3390002A29A044BC00C7E240 /* FoodOrdersResponse.swift */; };
 		3390C5F229968DC7003DB0BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3390C5F129968DC7003DB0BB /* GoogleService-Info.plist */; };
 		33934E39299A6A26006F22B1 /* login-lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 33934E38299A6A26006F22B1 /* login-lottie.json */; };
 		33934E3D299A6C75006F22B1 /* register-lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 33934E3C299A6C75006F22B1 /* register-lottie.json */; };
@@ -36,6 +38,10 @@
 		33EAEC75299B6FB600250820 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAEC74299B6FB600250820 /* DetailsInteractor.swift */; };
 		33EAEC77299B6FBF00250820 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAEC76299B6FBF00250820 /* DetailsPresenter.swift */; };
 		33EAEC79299B6FED00250820 /* DetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAEC78299B6FED00250820 /* DetailsProtocol.swift */; };
+		33FFE397299D36810040648E /* FoodBasketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FFE396299D36810040648E /* FoodBasketProtocols.swift */; };
+		33FFE399299D374C0040648E /* FoodBasketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FFE398299D374C0040648E /* FoodBasketRouter.swift */; };
+		33FFE39B299D37670040648E /* FoodBasketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FFE39A299D37670040648E /* FoodBasketInteractor.swift */; };
+		33FFE39D299D37780040648E /* FoodBasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FFE39C299D37780040648E /* FoodBasketPresenter.swift */; };
 		E17585B070CCABAED6A1E5A2 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AC718D0DCB764AF4436D7C /* Pods_FinalProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +56,8 @@
 		3368396C2996726C0096027B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3368396E299672750096027B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		336839702996747B0096027B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		3390002829A043BB00C7E240 /* FoodOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOrders.swift; sourceTree = "<group>"; };
+		3390002A29A044BC00C7E240 /* FoodOrdersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOrdersResponse.swift; sourceTree = "<group>"; };
 		3390C5F129968DC7003DB0BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		33934E38299A6A26006F22B1 /* login-lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "login-lottie.json"; sourceTree = "<group>"; };
 		33934E3C299A6C75006F22B1 /* register-lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "register-lottie.json"; sourceTree = "<group>"; };
@@ -74,6 +82,10 @@
 		33EAEC78299B6FED00250820 /* DetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsProtocol.swift; sourceTree = "<group>"; };
 		33EAEC7C299BA8DF00250820 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		33EAEC7D299BA8DF00250820 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		33FFE396299D36810040648E /* FoodBasketProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasketProtocols.swift; sourceTree = "<group>"; };
+		33FFE398299D374C0040648E /* FoodBasketRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasketRouter.swift; sourceTree = "<group>"; };
+		33FFE39A299D37670040648E /* FoodBasketInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasketInteractor.swift; sourceTree = "<group>"; };
+		33FFE39C299D37780040648E /* FoodBasketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasketPresenter.swift; sourceTree = "<group>"; };
 		67AC718D0DCB764AF4436D7C /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA2C3EE077572753FF222D4 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +107,8 @@
 			children = (
 				33AF9B382996256700D28269 /* Food.swift */,
 				3329287829970D9E0069D6D7 /* FoodsResponse.swift */,
+				3390002829A043BB00C7E240 /* FoodOrders.swift */,
+				3390002A29A044BC00C7E240 /* FoodOrdersResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -175,7 +189,6 @@
 		3329288229970FFF0069D6D7 /* fooddetail-module */ = {
 			isa = PBXGroup;
 			children = (
-				33292888299710870069D6D7 /* tableview */,
 				33292887299710310069D6D7 /* protocols */,
 				332928862997102A0069D6D7 /* router */,
 				33292885299710260069D6D7 /* interactor */,
@@ -236,6 +249,7 @@
 		33292889299710BF0069D6D7 /* foodbasket-module */ = {
 			isa = PBXGroup;
 			children = (
+				33292888299710870069D6D7 /* tableview */,
 				3329288E299710F50069D6D7 /* protocols */,
 				3329288D299710E80069D6D7 /* router */,
 				3329288C299710DF0069D6D7 /* interactor */,
@@ -256,6 +270,7 @@
 		3329288B299710D80069D6D7 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				33FFE39C299D37780040648E /* FoodBasketPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -263,6 +278,7 @@
 		3329288C299710DF0069D6D7 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				33FFE39A299D37670040648E /* FoodBasketInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -270,6 +286,7 @@
 		3329288D299710E80069D6D7 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				33FFE398299D374C0040648E /* FoodBasketRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -277,6 +294,7 @@
 		3329288E299710F50069D6D7 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				33FFE396299D36810040648E /* FoodBasketProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -489,23 +507,29 @@
 			files = (
 				3329287929970D9E0069D6D7 /* FoodsResponse.swift in Sources */,
 				3368396D2996726C0096027B /* RegisterViewController.swift in Sources */,
+				33FFE399299D374C0040648E /* FoodBasketRouter.swift in Sources */,
 				332928912997158A0069D6D7 /* AnasayfaPresenter.swift in Sources */,
 				33AF9B2729961D6300D28269 /* HomePage.swift in Sources */,
+				3390002B29A044BC00C7E240 /* FoodOrdersResponse.swift in Sources */,
 				336839712996747B0096027B /* WelcomeViewController.swift in Sources */,
+				33FFE39D299D37780040648E /* FoodBasketPresenter.swift in Sources */,
 				33AF9B3E2996473200D28269 /* FoodsTableViewCell.swift in Sources */,
 				33EAEC75299B6FB600250820 /* DetailsInteractor.swift in Sources */,
 				33EAEC77299B6FBF00250820 /* DetailsPresenter.swift in Sources */,
 				33292895299715DF0069D6D7 /* HomePageRouter.swift in Sources */,
+				33FFE39B299D37670040648E /* FoodBasketInteractor.swift in Sources */,
 				33EAEC73299B6FAC00250820 /* DetailsRouter.swift in Sources */,
 				33AF9B2329961D6300D28269 /* AppDelegate.swift in Sources */,
 				33AF9B4229964A2300D28269 /* DetailsViewController.swift in Sources */,
 				33AF9B40299647CA00D28269 /* FoodTableViewController.swift in Sources */,
 				33AF9B392996256700D28269 /* Food.swift in Sources */,
+				3390002929A043BB00C7E240 /* FoodOrders.swift in Sources */,
 				33AF9B372996240000D28269 /* CollectionViewCell.swift in Sources */,
 				3368396F299672760096027B /* LoginViewController.swift in Sources */,
 				33292897299716090069D6D7 /* HomePageProtocols.swift in Sources */,
 				33EAEC79299B6FED00250820 /* DetailsProtocol.swift in Sources */,
 				33292893299715B80069D6D7 /* HomePageInteractor.swift in Sources */,
+				33FFE397299D36810040648E /* FoodBasketProtocols.swift in Sources */,
 				33AF9B2529961D6300D28269 /* SceneDelegate.swift in Sources */,
 				33AF2A762996961B00098BF4 /* Constants.swift in Sources */,
 			);

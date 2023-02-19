@@ -19,15 +19,10 @@ class HomePagePresenter: ViewToPresenterHomePageProtocol {
         homepageInteractor?.search(searchWord: searchWord)
     }
     
-    func deleteFood(yemek_id: String) {
-        homepageInteractor?.deleteFood(yemek_id: yemek_id)
-    }
 }
 
 extension HomePagePresenter: InteractorToPresenterHomePageProtocol {
     func sendFoodToPresenter(foodList: [Yemekler]) {
         homepageView?.sendFoodToView(foodList: foodList)
     }
-    
-    
 }

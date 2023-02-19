@@ -13,6 +13,7 @@ class FoodsTableViewCell: UITableViewCell {
     @IBOutlet var foodPriceLabel: UILabel!
     @IBOutlet var foodNameLabel: UILabel!
     @IBOutlet var foodImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -7,14 +7,22 @@
 
 import Foundation
 
-protocol PresenterToInteractorFoodDetailsProtocol {
-    func update(yemek_id: String, yemek_adi: String, yemek_fiyat :String)
-}
-
 protocol ViewToPresenterFoodDetailsProtocol {
     var foodDetailsInteractor: PresenterToInteractorFoodDetailsProtocol? { get set }
     
-    func update(yemek_id: String, yemek_adi: String, yemek_fiyat: String)
+    func addToCard(yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: Int, yemek_siparis_adet: Int, kullanici_adi: String)
+}
+
+protocol PresenterToInteractorFoodDetailsProtocol {
+    func addToCard(yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: Int, yemek_siparis_adet: Int, kullanici_adi: String)
+}
+
+protocol InteractorToPresenterFoodDetailsProtocol {
+    
+}
+
+protocol PresenterToViewFoodDetailsProtocol {
+    
 }
 
 protocol PresenterToRouterFoodDetailsProtocol {

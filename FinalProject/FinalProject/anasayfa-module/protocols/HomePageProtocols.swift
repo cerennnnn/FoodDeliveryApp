@@ -13,7 +13,6 @@ protocol ViewToPresenterHomePageProtocol {
     
     func loadAllFoods()
     func search(searchWord: String)
-    func deleteFood(yemek_id: String)
 }
 
 protocol PresenterToInteractorHomePageProtocol {
@@ -21,7 +20,6 @@ protocol PresenterToInteractorHomePageProtocol {
     
     func loadAllFoods()
     func search(searchWord: String)
-    func deleteFood(yemek_id: String)
 }
 
 protocol InteractorToPresenterHomePageProtocol {
