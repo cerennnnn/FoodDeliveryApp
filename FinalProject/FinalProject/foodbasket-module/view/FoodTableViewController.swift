@@ -6,21 +6,37 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class FoodTableViewController: UIViewController {
 
     @IBOutlet var foodTable: UITableView!
     
-    var foods = [Yemekler]()
+    var foods = [FoodOrders]()
+    var foodBasketPresenterObject: ViewToPresenterFoodBasketProtocol?
+    var response: FoodOrders?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         foodTable.delegate = self
         foodTable.dataSource = self
+        
+        FoodBasketRouter.createModule(ref: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        foodBasketPresenterObject?.loadAllFoods()
     }
 }
 
+extension FoodTableViewController: PresenterToViewFoodBasketProtocol {
+    func sendFoodToView(foodList: [FoodOrders]) {
+        self.foods = foodList
+        print("self.foods = \(self.foods)")
+        print("foodList = \(foodList)")
+    }
+}
 
 // MARK: - Table view data source
 extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
@@ -30,11 +46,19 @@ extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.tableCell, for: indexPath) as! FoodsTableViewCell
-        let food = foods[indexPath.row]
+//        let food = foods[indexPath.row]
         
-        cell.foodImage.image = UIImage(named: food.yemek_resim_adi!)
-        cell.foodNameLabel.text = food.yemek_adi
-        cell.foodPriceLabel.text = "\(food.yemek_fiyat!) ₺"
+        if let response = response {
+            cell.foodPriceLabel.text = "\(response.yemek_fiyat!)"
+            cell.foodNumberLabel.text = "\(response.yemek_siparis_adet!)"
+            cell.foodImage.image = UIImage(named: response.yemek_resim_adi!)
+            cell.foodNameLabel.text = response.yemek_adi
+            
+        }
+        
+//        cell.foodImage.image = UIImage(named: food.yemek_resim_adi!)
+//        cell.foodNameLabel.text = food.yemek_adi
+//        cell.foodPriceLabel.text = "\(food.yemek_fiyat!) ₺"
 //        cell.foodNumberLabel.text = "\(food.yemek_siparis_adet!)"
 
         return cell

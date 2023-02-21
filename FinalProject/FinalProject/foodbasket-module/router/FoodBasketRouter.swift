@@ -9,6 +9,16 @@ import Foundation
 
 class FoodBasketRouter: PresenterToRouterFoodBasketProtocol {
     static func createModule(ref: FoodTableViewController) {
-        
+        let presenter = FoodBasketPresenter()
+            
+        //View
+        ref.foodBasketPresenterObject = presenter
+            
+        //Presenter
+        ref.foodBasketPresenterObject?.foodBasketInteractor = FoodBasketInteractor()
+        ref.foodBasketPresenterObject?.foodBasketView = ref
+            
+        //Interactor
+        ref.foodBasketPresenterObject?.foodBasketInteractor?.foodBasketPresenter = presenter
     }
 }

@@ -30,8 +30,8 @@
             filePath = "FinalProject/fooddetail-module/view/DetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "addToCardButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "FinalProject/fooddetail-module/view/DetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "addToCardButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -72,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "708CB06B-B939-483E-8A2C-37098CE43F45"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FinalProject/anasayfa-module/view/HomePage.swift"
@@ -94,13 +94,13 @@
             filePath = "FinalProject/fooddetail-module/view/DetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "addToCardButton(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "984A49FA-AA1D-475A-A035-A1CC9E596525 - e055fe86500880f5"
+                  uuid = "984A49FA-AA1D-475A-A035-A1CC9E596525 - e055fe8650088f2c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -110,12 +110,12 @@
                   urlString = "file:///Users/cerengunes/Desktop/FinalProject/FinalProject/FinalProject/fooddetail-module/view/DetailsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "1088">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1670">
                </Location>
                <Location
-                  uuid = "984A49FA-AA1D-475A-A035-A1CC9E596525 - e055fe86500880f5"
+                  uuid = "984A49FA-AA1D-475A-A035-A1CC9E596525 - e055fe8650088f2c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -125,12 +125,12 @@
                   urlString = "file:///Users/cerengunes/Desktop/FinalProject/FinalProject/FinalProject/fooddetail-module/view/DetailsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "1312">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1894">
                </Location>
                <Location
-                  uuid = "984A49FA-AA1D-475A-A035-A1CC9E596525 - e055fe86500880f5"
+                  uuid = "984A49FA-AA1D-475A-A035-A1CC9E596525 - e055fe8650088f2c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -140,12 +140,12 @@
                   urlString = "file:///Users/cerengunes/Desktop/FinalProject/FinalProject/FinalProject/fooddetail-module/view/DetailsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "1616">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "2198">
                </Location>
                <Location
-                  uuid = "984A49FA-AA1D-475A-A035-A1CC9E596525 - e055fe86500880f5"
+                  uuid = "984A49FA-AA1D-475A-A035-A1CC9E596525 - e055fe8650088f2c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -155,12 +155,12 @@
                   urlString = "file:///Users/cerengunes/Desktop/FinalProject/FinalProject/FinalProject/fooddetail-module/view/DetailsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "1893">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "2475">
                </Location>
                <Location
-                  uuid = "984A49FA-AA1D-475A-A035-A1CC9E596525 - e055fe86500880f5"
+                  uuid = "984A49FA-AA1D-475A-A035-A1CC9E596525 - e055fe8650088f2c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -170,12 +170,12 @@
                   urlString = "file:///Users/cerengunes/Desktop/FinalProject/FinalProject/FinalProject/fooddetail-module/view/DetailsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "2188">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "2770">
                </Location>
                <Location
-                  uuid = "984A49FA-AA1D-475A-A035-A1CC9E596525 - e055fe86500880f5"
+                  uuid = "984A49FA-AA1D-475A-A035-A1CC9E596525 - e055fe8650088f2c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -185,11 +185,123 @@
                   urlString = "file:///Users/cerengunes/Desktop/FinalProject/FinalProject/FinalProject/fooddetail-module/view/DetailsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "2858">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "3118">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0AC3E21C-7245-4603-80DE-44484C370239"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FinalProject/fooddetail-module/view/DetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0AC3E21C-7245-4603-80DE-44484C370239 - 8fdd98b0413e9664"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinalProject.DetailsViewController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "FinalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cerengunes/Desktop/FinalProject/FinalProject/FinalProject/fooddetail-module/view/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  uuid = "0AC3E21C-7245-4603-80DE-44484C370239 - 8fdd98b0413e9664"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinalProject.DetailsViewController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "FinalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cerengunes/Desktop/FinalProject/FinalProject/FinalProject/fooddetail-module/view/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "968">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46E11D12-512A-4658-B242-9F675AD6599B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FinalProject/fooddetail-module/view/DetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "46E11D12-512A-4658-B242-9F675AD6599B - 385b43151d445f42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinalProject.DetailsViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "FinalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cerengunes/Desktop/FinalProject/FinalProject/FinalProject/fooddetail-module/view/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "198">
+               </Location>
+               <Location
+                  uuid = "46E11D12-512A-4658-B242-9F675AD6599B - 385b43151d445f42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinalProject.DetailsViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "FinalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cerengunes/Desktop/FinalProject/FinalProject/FinalProject/fooddetail-module/view/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "247">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4EF4E95-382B-4527-B640-54D35AF429F9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FinalProject/foodbasket-module/view/FoodTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
