@@ -7,14 +7,16 @@
 
 import UIKit
 import FirebaseAuth
+import Kingfisher
 
 class FoodTableViewController: UIViewController {
 
     @IBOutlet var foodTable: UITableView!
     
+    var response: FoodOrders?
     var foods = [FoodOrders]()
     var foodBasketPresenterObject: ViewToPresenterFoodBasketProtocol?
-    var response: FoodOrders?
+    var userName = Auth.auth().currentUser?.email
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,9 @@ class FoodTableViewController: UIViewController {
 extension FoodTableViewController: PresenterToViewFoodBasketProtocol {
     func sendFoodToView(foodList: [FoodOrders]) {
         self.foods = foodList
-        print("self.foods = \(self.foods)")
-        print("foodList = \(foodList)")
+        DispatchQueue.main.async {
+            self.foodTable.reloadData()
+        }
     }
 }
 
@@ -45,22 +48,21 @@ extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let food = foods[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: K.tableCell, for: indexPath) as! FoodsTableViewCell
-//        let food = foods[indexPath.row]
         
-        if let response = response {
-            cell.foodPriceLabel.text = "\(response.yemek_fiyat!)"
-            cell.foodNumberLabel.text = "\(response.yemek_siparis_adet!)"
-            cell.foodImage.image = UIImage(named: response.yemek_resim_adi!)
-            cell.foodNameLabel.text = response.yemek_adi
-            
+        if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)") {
+            DispatchQueue.main.async {
+                cell.foodImage.kf.setImage(with: url)
+            }
         }
+        cell.foodNameLabel.text = food.yemek_adi
+        cell.foodPriceLabel.text = "\(food.yemek_fiyat!)₺"
+        cell.foodNumberLabel.text = "\(food.yemek_siparis_adet!) adet"
+//        cell.foodImage.kf.setImage(with: URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)")!, placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
         
-//        cell.foodImage.image = UIImage(named: food.yemek_resim_adi!)
-//        cell.foodNameLabel.text = food.yemek_adi
-//        cell.foodPriceLabel.text = "\(food.yemek_fiyat!) ₺"
-//        cell.foodNumberLabel.text = "\(food.yemek_siparis_adet!)"
-
+        print("yemek_adi: \(food.yemek_resim_adi!)")
+        
         return cell
     }
     
@@ -73,10 +75,10 @@ extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
             alert.addAction(iptalAction)
             
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){ action in
-//                self.anasayfaPresenterNesnesi?.sil(kisi_id: Int(food.sepet_yemek_id!)!)
+                self.foodBasketPresenterObject?.deleteFood(sepet_yemek_id: food.sepet_yemek_id!, kullanici_adi: self.userName!)
+                print("\(food.yemek_adi) - \(food.yemek_siparis_adet) silindi!")
             }
             alert.addAction(evetAction)
-            
             self.present(alert, animated: true)
         }
         

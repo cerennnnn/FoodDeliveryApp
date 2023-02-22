@@ -25,8 +25,7 @@ class FoodBasketInteractor: PresenterToInteractorFoodBasketProtocol {
                         self.foodBasketPresenter?.sendFoodToPresenter(foodList: list)
                     }
                     print("yemekler geldi.")
-                    print(cevap.sepet_yemekler!)
-                    print(cevap.success!)
+                    print(cevap.sepet_yemekler!.count)
                 } catch {
                     print(error.localizedDescription)
                 }
@@ -43,7 +42,7 @@ class FoodBasketInteractor: PresenterToInteractorFoodBasketProtocol {
                 do {
                     let cevap = try JSONDecoder().decode(FoodOrdersResponse.self, from: data)
                     print("siparis silindi.")
-                    print(cevap.sepet_yemekler)
+                    self.loadAllFoods()
                 } catch {
                     print(error.localizedDescription)
                 }

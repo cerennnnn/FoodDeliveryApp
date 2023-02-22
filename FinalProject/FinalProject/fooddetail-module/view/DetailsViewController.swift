@@ -22,6 +22,7 @@ class DetailsViewController: UIViewController {
     var detailsPresenterObject: ViewToPresenterFoodDetailsProtocol?
     var stepperValue = 1
     let username = Auth.auth().currentUser?.email
+    var price = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +55,6 @@ class DetailsViewController: UIViewController {
     @IBAction func addToCardButton(_ sender: UIButton) {
         
 //        MARK: - Add Alert to show animation & say item added.
-        guard let yemek_resim_adi = food?.yemek_resim_adi, let yemek_fiyat = food?.yemek_fiyat else { return }
         guard let yemek_adi = food?.yemek_adi else { return }
         let alert = UIAlertController(title: "", message: "\(stepperValue) adet \(yemek_adi) sepete eklendi.", preferredStyle: .alert)
         let OKButton = UIAlertAction(title: "Tamam", style: .default)
