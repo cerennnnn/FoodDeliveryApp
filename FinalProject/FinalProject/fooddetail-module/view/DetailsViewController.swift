@@ -50,6 +50,7 @@ class DetailsViewController: UIViewController {
     
     @IBAction func myBasketButton(_ sender: UIButton) {
         performSegue(withIdentifier: K.detailToBasketSegue, sender: nil)
+        
     }
     
     @IBAction func addToCardButton(_ sender: UIButton) {

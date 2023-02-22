@@ -51,17 +51,10 @@ extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
         let food = foods[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: K.tableCell, for: indexPath) as! FoodsTableViewCell
         
-        if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)") {
-            DispatchQueue.main.async {
-                cell.foodImage.kf.setImage(with: url)
-            }
-        }
+        cell.foodImage.kf.setImage(with: URL(string: "\(food.yemek_resim_adi!)")!, placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
         cell.foodNameLabel.text = food.yemek_adi
         cell.foodPriceLabel.text = "\(food.yemek_fiyat!)₺"
         cell.foodNumberLabel.text = "\(food.yemek_siparis_adet!) adet"
-//        cell.foodImage.kf.setImage(with: URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)")!, placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
-        
-        print("yemek_adi: \(food.yemek_resim_adi!)")
         
         return cell
     }
