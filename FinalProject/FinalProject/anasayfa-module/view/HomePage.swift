@@ -28,22 +28,21 @@ class HomePage: UIViewController {
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.tintColor = UIColor(named: "registerButtonForegroundColor")
         title = K.title
-        
-        //bosluklar
-        let tasarim = UICollectionViewFlowLayout()
-        tasarim.scrollDirection = .vertical
-        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15) //yanlardaki bosluklar
-        tasarim.minimumInteritemSpacing = 10 //kutucuklar arasi bosluk
-        tasarim.minimumLineSpacing = 10 //dikeydeki bosluk
+    
+        let design = UICollectionViewFlowLayout()
+        design.scrollDirection = .vertical
+        design.sectionInset = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
+        design.minimumInteritemSpacing = 10
+        design.minimumLineSpacing = 10
         
         collectionView.backgroundColor = UIColor(named: K.Colors.backgroundColor)
         
-        let ekranGenislik = UIScreen.main.bounds.width //ekranin tam genisligi
-        let itemGenislik = (ekranGenislik - 45) / 2 //herbir item'in genisligi
+        let screenWidth = UIScreen.main.bounds.width
+        let itemWidth = (screenWidth - 45) / 2 
         
-        tasarim.itemSize = CGSize(width: itemGenislik * 1, height: itemGenislik * 1) //kare olsun
+        design.itemSize = CGSize(width: itemWidth * 1, height: itemWidth * 1)
         
-        collectionView.collectionViewLayout = tasarim
+        collectionView.collectionViewLayout = design
         
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = UIColor(named: K.Colors.backgroundColor)
@@ -68,12 +67,20 @@ class HomePage: UIViewController {
     
     @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
         let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-            navigationController?.popToRootViewController(animated: true)
-        } catch {
-            print(error.localizedDescription)
+        let alert = UIAlertController(title: "Dikkat", message: "Çıkış yapmak istiyor musun ?", preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "Evet", style: .default) { action in
+            do {
+                try firebaseAuth.signOut()
+                self.navigationController?.popToRootViewController(animated: true)
+            } catch {
+                print(error.localizedDescription)
+            }
         }
+        let noAction = UIAlertAction(title: "Hayır", style: .cancel )
+        
+        alert.addAction(noAction)
+        alert.addAction(yesAction)
+        present(alert, animated: true)
     }
 }
 
@@ -103,7 +110,6 @@ extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource {
 
         cell.foodImage.kf.indicatorType = .activity
         cell.foodName.text = food.yemek_adi
-//        cell.foodPrice.text = "\(food.yemek_fiyat!)₺ "
         cell.foodImage.kf.setImage(with: URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
         
         return cell

@@ -69,7 +69,6 @@ extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
             
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){ action in
                 self.foodBasketPresenterObject?.deleteFood(sepet_yemek_id: food.sepet_yemek_id!, kullanici_adi: self.userName!)
-                print("\(food.yemek_adi) - \(food.yemek_siparis_adet) silindi!")
             }
             alert.addAction(evetAction)
             self.present(alert, animated: true)
