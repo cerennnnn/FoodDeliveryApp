@@ -449,7 +449,7 @@
                             <color key="tintColor" name="loginButtonBackgroundColor"/>
                             <connections>
                                 <action selector="myBasketButton:" destination="mUZ-WB-k6Z" id="VG8-iP-ii3"/>
-                                <segue destination="u2S-5Z-1w6" kind="show" identifier="buttonToBasketSegue" id="QmT-eb-bnH"/>
+                                <segue destination="u2S-5Z-1w6" kind="presentation" identifier="buttonToBasketSegue" id="QmT-eb-bnH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -475,7 +475,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CJN-QU-UAk">
-                                <rect key="frame" x="0.0" y="103" width="393" height="515"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" rowHeight="200" id="eMT-ir-LNH" customClass="FoodsTableViewCell" customModule="FinalProject" customModuleProvider="target">
@@ -534,7 +534,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="117" translatesAutoresizingMaskIntoConstraints="NO" id="PZT-TC-AaC">
-                                <rect key="frame" x="58.333333333333343" y="688" width="276.33333333333326" height="30"/>
+                                <rect key="frame" x="58.333333333333343" y="653" width="276.33333333333326" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iur-Hu-5eK">
                                         <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="30"/>
@@ -815,7 +815,7 @@
         <designable name="UD5-Fc-IZB"/>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="QGb-zr-aS7"/>
+        <segue reference="QmT-eb-bnH"/>
         <segue reference="W4J-G0-SQ8"/>
     </inferredMetricsTieBreakers>
     <resources>

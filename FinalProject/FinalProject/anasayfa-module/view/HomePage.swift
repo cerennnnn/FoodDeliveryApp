@@ -26,6 +26,7 @@ class HomePage: UIViewController {
         collectionView.dataSource = self
         
         navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.tintColor = UIColor(named: "registerButtonForegroundColor")
         title = K.title
         
         //bosluklar
