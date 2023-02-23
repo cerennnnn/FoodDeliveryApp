@@ -15,10 +15,11 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     
+    var message = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
         animationView.animationSpeed = 0.5
@@ -30,9 +31,20 @@ class LoginViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
               guard let strongSelf = self else { return }
                 if let e = error {
-                    print(e.localizedDescription)
-                    let alert = UIAlertController(title: "!!", message: e.localizedDescription, preferredStyle: .alert)
-                    let OKButton = UIAlertAction(title: "OK", style: .default)
+                            let err = e as NSError
+                            switch err.code {
+                            case AuthErrorCode.wrongPassword.rawValue:
+                                self?.message = "Yanlış şifre girdiniz!"
+                            case AuthErrorCode.invalidEmail.rawValue:
+                                self?.message = "Geçersiz e-mail adresi!"
+                            case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
+                                self?.message = "Bu e-mail çoktan alınmış!"
+                            default:
+                                print("unknown error: \(err.localizedDescription)")
+                            }
+                    
+                    let alert = UIAlertController(title: "Hata", message: self?.message, preferredStyle: .alert)
+                    let OKButton = UIAlertAction(title: "Tamam", style: .default)
 
                     alert.addAction(OKButton)
                     self?.present(alert, animated: true)
