@@ -79,5 +79,12 @@ class DetailsViewController: UIViewController {
     @IBAction func stepperPressed(_ sender: UIStepper) {
         stepperValueLabel.text = "\(Int(sender.value))"
         stepperValue = Int(sender.value)
+        
+        if let foodID = Int((food?.foodID)!) {
+            
+            for i in 1...foodID {
+                //add new data on top of the previous data
+            }
+        }
     }
 }
