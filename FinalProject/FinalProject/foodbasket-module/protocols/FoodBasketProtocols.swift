@@ -7,7 +7,6 @@
 
 import Foundation
 
-//Main Protocols
 protocol ViewToPresenterFoodBasketProtocol {
     var foodBasketInteractor: PresenterToInteractorFoodBasketProtocol? { get set }
     var foodBasketView: PresenterToViewFoodBasketProtocol? { get set }
@@ -23,7 +22,6 @@ protocol PresenterToInteractorFoodBasketProtocol {
     func deleteFood(sepet_yemek_id: String, kullanici_adi: String)
 }
 
-//Carrier Protocols
 protocol InteractorToPresenterFoodBasketProtocol {
     func sendFoodToPresenter(foodList: [FoodOrders])
 }
@@ -32,7 +30,6 @@ protocol PresenterToViewFoodBasketProtocol {
     func sendFoodToView(foodList: [FoodOrders])
 }
 
-//Router Protocol
 protocol PresenterToRouterFoodBasketProtocol {
     static func createModule(ref: FoodTableViewController)
 }

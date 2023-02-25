@@ -809,14 +809,13 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="BsO-yK-Irk"/>
-        <designable name="Pus-bG-nod"/>
-        <designable name="T2g-MS-Ntf"/>
-        <designable name="UD5-Fc-IZB"/>
+        <designable name="BsO-yK-Irk">
+            <size key="intrinsicContentSize" width="275" height="67"/>
+        </designable>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="QmT-eb-bnH"/>
-        <segue reference="W4J-G0-SQ8"/>
+        <segue reference="P0y-Mw-nas"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="basket" catalog="system" width="128" height="108"/>
