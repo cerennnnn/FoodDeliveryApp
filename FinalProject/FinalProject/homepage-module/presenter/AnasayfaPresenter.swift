@@ -8,6 +8,7 @@
 import Foundation
 
 class HomePagePresenter: ViewToPresenterHomePageProtocol {
+
     var homepageInteractor: PresenterToInteractorHomePageProtocol?
     var homepageView: PresenterToViewHomePageProtocol?
     
@@ -26,7 +27,15 @@ class HomePagePresenter: ViewToPresenterHomePageProtocol {
         homepageInteractor?.search(searchWord: searchedWord)
     }
     
-    func activeArray() -> [Foods] {
+    func getFoodList() -> Int {
+        return workingArray().count
+    }
+    
+    func getSearch(for indexPath: IndexPath) -> Foods {
+        return workingArray()[indexPath.row]
+    }
+    
+    func workingArray() -> [Foods] {
         if searchedWord.count == 0 {
             return foodList
         } else {
@@ -38,6 +47,7 @@ class HomePagePresenter: ViewToPresenterHomePageProtocol {
 
 extension HomePagePresenter: InteractorToPresenterHomePageProtocol {
     func sendFoodToPresenter(foodList: [Foods]) {
-        homepageView?.sendFoodToView(foodList: foodList)
+        self.foodList = foodList
+        homepageView?.sendFoodToView(foodList: workingArray())
     }
 }

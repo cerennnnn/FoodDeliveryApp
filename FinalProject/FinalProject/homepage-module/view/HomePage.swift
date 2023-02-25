@@ -17,9 +17,15 @@ class HomePage: UIViewController {
     
     var foods = [Foods]()
     var homePagePresenterObject: ViewToPresenterHomePageProtocol?
+    var activityIndicator = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(activityIndicator)
+        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         searchBar.delegate = self
         collectionView.delegate = self
@@ -59,8 +65,8 @@ class HomePage: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.detailSegue {
             if let food = sender as? Foods {
-                let gidilecekVC = segue.destination as! DetailsViewController
-                gidilecekVC.food = food
+                let destinationVC = segue.destination as! DetailsViewController
+                destinationVC.food = food
             }
         }
     }
@@ -87,8 +93,11 @@ class HomePage: UIViewController {
 extension HomePage: PresenterToViewHomePageProtocol {
     func sendFoodToView(foodList: [Foods]) {
         self.foods = foodList
-        DispatchQueue.main.async {
+        self.activityIndicator.startAnimating()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
             self.collectionView.reloadData()
+            self.activityIndicator.stopAnimating()
         }
     }
 }

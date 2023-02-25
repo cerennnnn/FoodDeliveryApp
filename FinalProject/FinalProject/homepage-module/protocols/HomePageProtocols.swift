@@ -11,6 +11,8 @@ protocol ViewToPresenterHomePageProtocol {
     var homepageInteractor: PresenterToInteractorHomePageProtocol? { get set }
     var homepageView: PresenterToViewHomePageProtocol? { get set }
     
+    func getFoodList() -> Int
+    func getSearch(for indexPath: IndexPath) -> Foods
     func loadAllFoods()
     func search(searchWord: String)
 }

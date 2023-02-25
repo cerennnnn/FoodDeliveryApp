@@ -119,7 +119,7 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		3329287A29970E8C0069D6D7 /* anasayfa-module */ = {
+		3329287A29970E8C0069D6D7 /* homepage-module */ = {
 			isa = PBXGroup;
 			children = (
 				3329287B29970EB10069D6D7 /* collectionview */,
@@ -129,7 +129,7 @@
 				3329287F29970ED90069D6D7 /* presenter */,
 				3329288029970EDE0069D6D7 /* view */,
 			);
-			path = "anasayfa-module";
+			path = "homepage-module";
 			sourceTree = "<group>";
 		};
 		3329287B29970EB10069D6D7 /* collectionview */ = {
@@ -348,7 +348,7 @@
 			children = (
 				336A8DAA29A7B141005A91A7 /* onboarding-pages */,
 				3329288F2997111D0069D6D7 /* login-register-pages */,
-				3329287A29970E8C0069D6D7 /* anasayfa-module */,
+				3329287A29970E8C0069D6D7 /* homepage-module */,
 				3329288229970FFF0069D6D7 /* fooddetail-module */,
 				33292889299710BF0069D6D7 /* foodbasket-module */,
 				33C842D02996862B008AC7E4 /* lottie-files */,

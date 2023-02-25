@@ -13,9 +13,12 @@ class FoodTableViewController: UIViewController {
 
     @IBOutlet var foodTable: UITableView!
     
+    @IBOutlet var totalLabel: UILabel!
     var response: FoodOrders?
     var foods = [FoodOrders]()
     var foodBasketPresenterObject: ViewToPresenterFoodBasketProtocol?
+    var total: Int?
+    var price: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,8 @@ class FoodTableViewController: UIViewController {
         foodTable.dataSource = self
         
         FoodBasketRouter.createModule(ref: self)
+        
+        totalLabel.text = "0₺"
     }
     
     override func viewWillAppear(_ animated: Bool) {
