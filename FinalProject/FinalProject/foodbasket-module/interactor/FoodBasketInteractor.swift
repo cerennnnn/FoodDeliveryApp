@@ -11,21 +11,18 @@ import FirebaseAuth
 
 class FoodBasketInteractor: PresenterToInteractorFoodBasketProtocol {
     var foodBasketPresenter: InteractorToPresenterFoodBasketProtocol?
-    let userName = Auth.auth().currentUser?.email
     
     func loadAllFoods() {
         //http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php
-        let params = ["kullanici_adi": userName]
+        let params = ["kullanici_adi": username]
         
         AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: params).response { response in
             if let data = response.data {
                 do {
-                    let cevap = try JSONDecoder().decode(FoodOrdersResponse.self, from: data)
-                    if let list = cevap.sepet_yemekler {
+                    let response = try JSONDecoder().decode(FoodOrdersResponse.self, from: data)
+                    if let list = response.basketFoods {
                         self.foodBasketPresenter?.sendFoodToPresenter(foodList: list)
                     }
-                    print("yemekler geldi.")
-                    print(cevap.sepet_yemekler!.count)
                 } catch {
                     print(error.localizedDescription)
                 }
@@ -41,7 +38,6 @@ class FoodBasketInteractor: PresenterToInteractorFoodBasketProtocol {
             if let data = response.data {
                 do {
                     let cevap = try JSONDecoder().decode(FoodOrdersResponse.self, from: data)
-                    print("siparis silindi.")
                     self.loadAllFoods()
                 } catch {
                     print(error.localizedDescription)

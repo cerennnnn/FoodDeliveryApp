@@ -18,10 +18,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet var stepperValueLabel: UILabel!
     
     var foodImageName: String?
-    var food: Yemekler?
+    var food: Foods?
     var detailsPresenterObject: ViewToPresenterFoodDetailsProtocol?
     var stepperValue = 1
-    let username = Auth.auth().currentUser?.email
     var price = 0
     
     override func viewDidLoad() {
@@ -30,11 +29,11 @@ class DetailsViewController: UIViewController {
         DetailsRouter.createModule(ref: self)
         
         if let food = food {
-            foodImageName = "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)"
+            foodImageName = "\(K.url)\(food.foodImageName!)"
             foodImage.kf.indicatorType = .activity
-            foodNameLabel.text = food.yemek_adi
-            foodPriceLabel.text = "\(food.yemek_fiyat!)₺"
-            foodImage.kf.setImage(with: URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)   
+            foodNameLabel.text = food.foodName
+            foodPriceLabel.text = "\(food.foodPrice!)₺"
+            foodImage.kf.setImage(with: URL(string: "\(K.url)\(food.foodImageName!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
         }
         
     }
@@ -50,23 +49,21 @@ class DetailsViewController: UIViewController {
     
     @IBAction func myBasketButton(_ sender: UIButton) {
         performSegue(withIdentifier: K.detailToBasketSegue, sender: nil)
-        
     }
     
     @IBAction func addToCardButton(_ sender: UIButton) {
         
 //        MARK: - Add Alert to show animation & say item added.
-        guard let yemek_adi = food?.yemek_adi else { return }
-        let alert = UIAlertController(title: "", message: "\(stepperValue) adet \(yemek_adi) sepete eklendi.", preferredStyle: .alert)
+        guard let foodName = food?.foodName else { return }
+        let alert = UIAlertController(title: "", message: "\(stepperValue) adet \(foodName) sepete eklendi.", preferredStyle: .alert)
         let OKButton = UIAlertAction(title: "Tamam", style: .default)
 
         alert.addAction(OKButton)
 
         self.present(alert, animated: true)
         
-        if let foodName = foodNameLabel.text, let foodImageName = foodImageName, let foodPrice = food?.yemek_fiyat, let orderAmount = stepperValueLabel.text, let username = username {
-                detailsPresenterObject?.addToCard(yemek_adi: foodName, yemek_resim_adi: foodImageName, yemek_fiyat: String(Int(foodPrice)!), yemek_siparis_adet: String(Int(orderAmount)!), kullanici_adi: username)
-                print("email: \(username)")
+        if let foodName = foodNameLabel.text, let foodImageName = foodImageName, let foodPrice = food?.foodPrice, let orderAmount = stepperValueLabel.text, let username = username {
+            detailsPresenterObject?.addToCard(foodName: foodName, foodImageName: foodImageName, foodPrice: String(Int(foodPrice)!), foodOrderAmount: String(Int(orderAmount)!), userName: username)
         }
         performSegue(withIdentifier: K.detailToBasketSegue, sender: nil)
     }

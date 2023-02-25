@@ -23,11 +23,11 @@ protocol PresenterToInteractorHomePageProtocol {
 }
 
 protocol InteractorToPresenterHomePageProtocol {
-    func sendFoodToPresenter(foodList: [Yemekler])
+    func sendFoodToPresenter(foodList: [Foods])
 }
 
 protocol PresenterToViewHomePageProtocol {
-    func sendFoodToView(foodList: [Yemekler])
+    func sendFoodToView(foodList: [Foods])
 }
 
 protocol PresenterToRouterHomePageProtocol {

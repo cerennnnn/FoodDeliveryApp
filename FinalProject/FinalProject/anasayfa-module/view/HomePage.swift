@@ -15,7 +15,7 @@ class HomePage: UIViewController {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
     
-    var foods = [Yemekler]()
+    var foods = [Foods]()
     var homePagePresenterObject: ViewToPresenterHomePageProtocol?
     
     override func viewDidLoad() {
@@ -26,7 +26,7 @@ class HomePage: UIViewController {
         collectionView.dataSource = self
         
         navigationItem.hidesBackButton = true
-        navigationController?.navigationBar.tintColor = UIColor(named: "registerButtonForegroundColor")
+        navigationController?.navigationBar.tintColor = UIColor(named: K.Colors.navigationBarTint)
         title = K.title
     
         let design = UICollectionViewFlowLayout()
@@ -58,7 +58,7 @@ class HomePage: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.detailSegue {
-            if let food = sender as? Yemekler {
+            if let food = sender as? Foods {
                 let gidilecekVC = segue.destination as! DetailsViewController
                 gidilecekVC.food = food
             }
@@ -85,7 +85,7 @@ class HomePage: UIViewController {
 }
 
 extension HomePage: PresenterToViewHomePageProtocol {
-    func sendFoodToView(foodList: [Yemekler]) {
+    func sendFoodToView(foodList: [Foods]) {
         self.foods = foodList
         DispatchQueue.main.async {
             self.collectionView.reloadData()
@@ -109,8 +109,8 @@ extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource {
         let food = foods[indexPath.row]
 
         cell.foodImage.kf.indicatorType = .activity
-        cell.foodName.text = food.yemek_adi
-        cell.foodImage.kf.setImage(with: URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+        cell.foodName.text = food.foodName
+        cell.foodImage.kf.setImage(with: URL(string: "\(K.url)\(food.foodImageName!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
         
         return cell
     }

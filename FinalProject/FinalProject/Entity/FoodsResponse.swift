@@ -8,6 +8,10 @@
 import Foundation
 
 class FoodsResponse: Codable {
-    var yemekler: [Yemekler]?
+    var foods: [Foods]?
     var success: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case foods = "yemekler"
+    }
 }

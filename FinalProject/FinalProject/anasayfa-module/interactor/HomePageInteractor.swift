@@ -16,8 +16,8 @@ class HomePageInteractor: PresenterToInteractorHomePageProtocol {
         AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php",method: .get).response { response in
             if let data = response.data {
                 do {
-                    let cevap = try JSONDecoder().decode(FoodsResponse.self, from: data)
-                    if let response = cevap.yemekler  {
+                    let answer = try JSONDecoder().decode(FoodsResponse.self, from: data)
+                    if let response = answer.foods  {
                         self.homepagePresenter?.sendFoodToPresenter(foodList: response)
                     }
                 } catch {
@@ -33,8 +33,8 @@ class HomePageInteractor: PresenterToInteractorHomePageProtocol {
         AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php",method: .post,parameters: params).response { response in
             if let data = response.data {
                 do {
-                    let cevap = try JSONDecoder().decode(FoodsResponse.self, from: data)
-                    if let liste = cevap.yemekler {
+                    let answer = try JSONDecoder().decode(FoodsResponse.self, from: data)
+                    if let liste = answer.foods {
                         self.homepagePresenter?.sendFoodToPresenter(foodList: liste)
                     }
                 } catch {

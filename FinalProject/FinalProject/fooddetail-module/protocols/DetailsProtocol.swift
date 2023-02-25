@@ -10,11 +10,11 @@ import Foundation
 protocol ViewToPresenterFoodDetailsProtocol {
     var foodDetailsInteractor: PresenterToInteractorFoodDetailsProtocol? { get set }
     
-    func addToCard(yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: String, yemek_siparis_adet: String, kullanici_adi: String)
+    func addToCard(foodName: String, foodImageName: String, foodPrice: String, foodOrderAmount: String, userName: String)
 }
 
 protocol PresenterToInteractorFoodDetailsProtocol {
-    func addToCard(yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: String, yemek_siparis_adet: String, kullanici_adi: String)
+    func addToCard(foodName: String, foodImageName: String, foodPrice: String, foodOrderAmount: String, userName: String)
 }
 
 protocol InteractorToPresenterFoodDetailsProtocol {

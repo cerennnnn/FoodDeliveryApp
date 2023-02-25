@@ -11,18 +11,33 @@ class HomePagePresenter: ViewToPresenterHomePageProtocol {
     var homepageInteractor: PresenterToInteractorHomePageProtocol?
     var homepageView: PresenterToViewHomePageProtocol?
     
+    var foodList: [Foods] = []
+    var searchedItems: [Foods] = []
+    var searchedWord: String = ""
+    
     func loadAllFoods() {
         homepageInteractor?.loadAllFoods()
     }
     
     func search(searchWord: String) {
-        homepageInteractor?.search(searchWord: searchWord)
+        searchedWord = searchWord
+        searchedItems = foodList.filter({ $0.foodName?.lowercased().contains(searchWord.lowercased()) ?? false })
+        homepageView?.sendFoodToView(foodList: foodList)
+        homepageInteractor?.search(searchWord: searchedWord)
+    }
+    
+    func activeArray() -> [Foods] {
+        if searchedWord.count == 0 {
+            return foodList
+        } else {
+            return searchedItems
+        }
     }
     
 }
 
 extension HomePagePresenter: InteractorToPresenterHomePageProtocol {
-    func sendFoodToPresenter(foodList: [Yemekler]) {
+    func sendFoodToPresenter(foodList: [Foods]) {
         homepageView?.sendFoodToView(foodList: foodList)
     }
 }

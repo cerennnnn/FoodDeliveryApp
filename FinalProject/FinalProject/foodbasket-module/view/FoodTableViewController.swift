@@ -16,7 +16,6 @@ class FoodTableViewController: UIViewController {
     var response: FoodOrders?
     var foods = [FoodOrders]()
     var foodBasketPresenterObject: ViewToPresenterFoodBasketProtocol?
-    var userName = Auth.auth().currentUser?.email
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,29 +50,29 @@ extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
         let food = foods[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: K.tableCell, for: indexPath) as! FoodsTableViewCell
         
-        cell.foodImage.kf.setImage(with: URL(string: "\(food.yemek_resim_adi!)")!, placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
-        cell.foodNameLabel.text = food.yemek_adi
-        cell.foodPriceLabel.text = "\(food.yemek_fiyat!)₺"
-        cell.foodNumberLabel.text = "\(food.yemek_siparis_adet!) adet"
+        cell.foodImage.kf.setImage(with: URL(string: "\(food.foodImageName!)")!, placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+        cell.foodNameLabel.text = food.foodName
+        cell.foodPriceLabel.text = "\(food.foodPrice!)₺"
+        cell.foodNumberLabel.text = "\(food.foodOrderAmount!) adet"
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let silAction = UIContextualAction(style: .destructive, title: "Sil"){ (contextualAction,view,bool) in
+        let deleteAction = UIContextualAction(style: .destructive, title: "Sil"){ (contextualAction,view,bool) in
             let food = self.foods[indexPath.row]
             
-            let alert = UIAlertController(title: "Dikkat!", message: "\(food.yemek_adi!) silinsin mi ?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Dikkat!", message: "\(food.foodName!) silinsin mi ?", preferredStyle: .alert)
             let iptalAction = UIAlertAction(title: "İptal", style: .cancel)
             alert.addAction(iptalAction)
             
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){ action in
-                self.foodBasketPresenterObject?.deleteFood(sepet_yemek_id: food.sepet_yemek_id!, kullanici_adi: self.userName!)
+                self.foodBasketPresenterObject?.deleteFood(sepet_yemek_id: food.basketFoodID!, kullanici_adi: username!)
             }
             alert.addAction(evetAction)
             self.present(alert, animated: true)
         }
         
-        return UISwipeActionsConfiguration(actions: [silAction])
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }
