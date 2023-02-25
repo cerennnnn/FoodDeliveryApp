@@ -819,7 +819,7 @@
         <segue reference="W4J-G0-SQ8"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="basket" catalog="system" width="32" height="32"/>
+        <image name="basket" catalog="system" width="128" height="108"/>
         <image name="chicken" width="1500" height="1500"/>
         <image name="pic1" width="3845" height="4646"/>
         <namedColor name="anchorColor">
