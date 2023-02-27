@@ -93,7 +93,7 @@
 "j9h-a6-uju.text" = "1";
 
 /* Class = "UIBarButtonItem"; title = "Log Out"; ObjectID = "qX2-BY-3XJ"; */
-"qX2-BY-3XJ.title" = "Çıkıs Yap";
+"qX2-BY-3XJ.title" = "Çıkış Yap";
 
 /* Class = "UILabel"; text = "$ 21.50"; ObjectID = "rt8-1p-fQt"; */
 "rt8-1p-fQt.text" = "21.50 ₺";
