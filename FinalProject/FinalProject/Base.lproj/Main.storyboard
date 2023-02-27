@@ -263,21 +263,21 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="g0G-38-wOC" customClass="CollectionViewCell" customModule="FinalProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vFE-TW-H7m">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="Q4y-4h-f4h">
-                                                    <rect key="frame" x="-5" y="10" width="140" height="140"/>
+                                                    <rect key="frame" x="5" y="10" width="140" height="140"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="140" id="VIU-Wg-QeU"/>
                                                         <constraint firstAttribute="width" constant="140" id="qVv-04-7UV"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTV-sj-ste">
-                                                    <rect key="frame" x="45.666666666666657" y="95" width="39" height="18"/>
+                                                    <rect key="frame" x="55.666666666666657" y="115" width="39" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" name="buttonBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -291,9 +291,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" name="cellBackgroundColor"/>
-                                        <size key="customSize" width="130" height="130"/>
+                                        <size key="customSize" width="150" height="150"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="30"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="35"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="foodImage" destination="Q4y-4h-f4h" id="JYn-69-fSl"/>
@@ -475,7 +475,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CJN-QU-UAk">
-                                <rect key="frame" x="0.0" y="59" width="393" height="584"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="624"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" rowHeight="200" id="eMT-ir-LNH" customClass="FoodsTableViewCell" customModule="FinalProject" customModuleProvider="target">
@@ -485,7 +485,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="EUY-su-QGK">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="EUY-su-QGK">
                                                     <rect key="frame" x="20" y="25" width="150" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="lIJ-mW-h9M"/>
@@ -539,7 +539,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="117" translatesAutoresizingMaskIntoConstraints="NO" id="PZT-TC-AaC">
-                                <rect key="frame" x="58.333333333333343" y="653" width="276.33333333333326" height="30"/>
+                                <rect key="frame" x="58.333333333333343" y="728" width="276.33333333333326" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iur-Hu-5eK">
                                         <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="30"/>
@@ -559,8 +559,8 @@
                         <viewLayoutGuide key="safeArea" id="RYR-oU-afg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RYR-oU-afg" firstAttribute="bottom" secondItem="CJN-QU-UAk" secondAttribute="bottom" constant="140" id="W3C-hH-SDa"/>
-                            <constraint firstItem="RYR-oU-afg" firstAttribute="bottom" secondItem="PZT-TC-AaC" secondAttribute="bottom" constant="100" id="a1o-UU-3qT"/>
+                            <constraint firstItem="RYR-oU-afg" firstAttribute="bottom" secondItem="CJN-QU-UAk" secondAttribute="bottom" constant="100" id="W3C-hH-SDa"/>
+                            <constraint firstItem="RYR-oU-afg" firstAttribute="bottom" secondItem="PZT-TC-AaC" secondAttribute="bottom" constant="25" id="a1o-UU-3qT"/>
                             <constraint firstItem="PZT-TC-AaC" firstAttribute="centerX" secondItem="dvF-WW-JEy" secondAttribute="centerX" id="c3T-kl-BXk"/>
                             <constraint firstItem="RYR-oU-afg" firstAttribute="trailing" secondItem="CJN-QU-UAk" secondAttribute="trailing" id="eJa-64-uLI"/>
                             <constraint firstItem="CJN-QU-UAk" firstAttribute="leading" secondItem="RYR-oU-afg" secondAttribute="leading" id="hu6-tX-hok"/>

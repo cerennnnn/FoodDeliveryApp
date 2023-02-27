@@ -74,13 +74,18 @@ class HomePage: UIViewController {
     @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
         let firebaseAuth = Auth.auth()
         let alert = UIAlertController(title: "Dikkat", message: "Çıkış yapmak istiyor musun ?", preferredStyle: .alert)
-        let yesAction = UIAlertAction(title: "Evet", style: .default) { action in
-            do {
-                try firebaseAuth.signOut()
-                self.navigationController?.popToRootViewController(animated: true)
-            } catch {
-                print(error.localizedDescription)
+        let yesAction = UIAlertAction(title: "Evet", style: .destructive) { action in
+            self.activityIndicator.startAnimating()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                do {
+                    try firebaseAuth.signOut()
+                    self.navigationController?.popToRootViewController(animated: true)
+                    self.activityIndicator.stopAnimating()
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
+
         }
         let noAction = UIAlertAction(title: "Hayır", style: .cancel )
         

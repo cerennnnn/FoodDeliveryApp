@@ -24,6 +24,7 @@ class DetailsViewController: UIViewController {
     var price = 1
     var priceLabel = 1
     var total = 1
+//    var foodPrice = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,7 @@ class DetailsViewController: UIViewController {
             foodImage.kf.indicatorType = .activity
             foodNameLabel.text = food.foodName
             foodPriceLabel.text = "\(food.foodPrice!)₺"
-            foodImage.kf.setImage(with: URL(string: "\(K.url)\(food.foodImageName!)"), placeholder: nil, options: [.transition(.fade(0.5))], progressBlock: nil)
+            foodImage.kf.setImage(with: URL(string: "\(K.url)\(food.foodImageName!)"), placeholder: nil, options: [.transition(.fade(0.8))], progressBlock: nil)
         }
         
     }
@@ -45,8 +46,8 @@ class DetailsViewController: UIViewController {
             if let food = sender as? FoodOrders {
                 let destinationVC = segue.destination as! FoodTableViewController
                 destinationVC.response = food
-                destinationVC.total = total
-                destinationVC.price = price
+//                destinationVC.foodOrderAmount = Int(food.foodPrice!)! * stepperValue
+                print("foodOrderAmount = \( Int(food.foodPrice!)! * stepperValue)")
             }
         }
     }
@@ -84,6 +85,8 @@ class DetailsViewController: UIViewController {
             
             for i in 1...foodID {
                 //add new data on top of the previous data
+//                foodPrice += Int((food?.foodPrice)!)!
+//                print("\(i) foodID'li yemegin fiyati: \(foodPrice)")
             }
         }
     }
