@@ -17,10 +17,6 @@ class FoodTableViewController: UIViewController {
     var response: FoodOrders?
     var foods = [FoodOrders]()
     var foodBasketPresenterObject: ViewToPresenterFoodBasketProtocol?
-    var baskettotal = 0
-    var foodPrice = 0
-    var isDeleted = false
-    var firstVal = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,18 +27,18 @@ class FoodTableViewController: UIViewController {
         FoodBasketRouter.createModule(ref: self)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        foodBasketPresenterObject?.loadAllFoods()
+    func getTotalLabel() {
+        var total = 0
+        var price = 0
+        for food in foods {
+            price = Int(food.foodPrice!)! * Int(food.foodOrderAmount!)!
+            total += price
+            totalLabel.text = "\(total)₺"
+        }
     }
     
-    func getTotalLabel() {
-            if !isDeleted {
-                baskettotal += foodPrice
-                totalLabel.text = "\(baskettotal)₺"
-            } else {
-                baskettotal -= foodPrice
-                totalLabel.text = "\(baskettotal)₺"
-            }
+    override func viewWillAppear(_ animated: Bool) {
+        foodBasketPresenterObject?.loadAllFoods()
     }
 }
 
@@ -70,31 +66,24 @@ extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
         cell.foodPriceLabel.text = "\(food.foodPrice!)₺"
         cell.foodNumberLabel.text = "(\(food.foodOrderAmount!) adet)"
      
+        getTotalLabel()
+        
         tableView.separatorColor = UIColor(named: "cellLightModeBackground")
         
-        let totall = Int(food.foodPrice!)! * Int(food.foodOrderAmount!)!
-        print("foodPrice: \(foodPrice)")
-        print("basketTotal: \(baskettotal)")
-
-        totalLabel.text = "\(totall)TL"
-
         return cell
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Sil"){ (contextualAction,view,bool) in
             let food = self.foods[indexPath.row]
-            
             if let foodOrderAmount = food.foodOrderAmount {
                 let alert = UIAlertController(title: "Dikkat!", message: "\(foodOrderAmount) adet \(food.foodName!) silinsin mi ?", preferredStyle: .alert)
-                let iptalAction = UIAlertAction(title: "İptal", style: .cancel)
-                alert.addAction(iptalAction)
+                let cancelAction = UIAlertAction(title: "İptal", style: .cancel)
+                alert.addAction(cancelAction)
                 
                 let yesAction = UIAlertAction(title: "Evet", style: .destructive) { action in
                     self.foodBasketPresenterObject?.deleteFood(sepet_yemek_id: food.basketFoodID!, kullanici_adi: username!)
-                    
                     self.foods.remove(at: indexPath.row)
-                    self.isDeleted = true
                     self.getTotalLabel()
                     tableView.reloadData()
                     
@@ -113,7 +102,6 @@ extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
                 self.present(alert, animated: true)
             }
         }
-        self.isDeleted = false
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }

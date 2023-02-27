@@ -24,8 +24,8 @@ class OnboardingViewController: UIViewController {
         }
     }
     var slides: [OnboardingSlide] = [
-        OnboardingSlide(title: "Aradığınız Lezzetler", description: "Lezzetli ve sağlıklı yemekler!", image: UIImage(named: "pic1")!),
-        OnboardingSlide(title: "Profesyonel aşçılarımız", description: "Marifetli şeflerimizin yemeklerini yiyin!", image: UIImage(named: "pic2")!),
+        OnboardingSlide(title: "Aradığınız Lezzetler...", description: "Lezzetli ve sağlıklı yemekler!", image: UIImage(named: "pic1")!),
+        OnboardingSlide(title: "Profesyonel aşçılar", description: "Marifetli şeflerimizin yemeklerini yiyin!", image: UIImage(named: "pic2")!),
         OnboardingSlide(title: "Hızlı servis", description: "Siparişleriniz nerede olursanız olun hemen kapınızda!", image: UIImage(named: "pic3")!)
     ]
     

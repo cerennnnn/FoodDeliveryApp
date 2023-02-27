@@ -24,7 +24,6 @@ class DetailsViewController: UIViewController {
     var price = 1
     var priceLabel = 1
     var total = 1
-//    var foodPrice = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +45,6 @@ class DetailsViewController: UIViewController {
             if let food = sender as? FoodOrders {
                 let destinationVC = segue.destination as! FoodTableViewController
                 destinationVC.response = food
-//                destinationVC.foodOrderAmount = Int(food.foodPrice!)! * stepperValue
-                print("foodOrderAmount = \( Int(food.foodPrice!)! * stepperValue)")
             }
         }
     }
@@ -80,14 +77,5 @@ class DetailsViewController: UIViewController {
     @IBAction func stepperPressed(_ sender: UIStepper) {
         stepperValueLabel.text = "\(Int(sender.value))"
         stepperValue = Int(sender.value)
-        
-        if let foodID = Int((food?.foodID)!) {
-            
-            for i in 1...foodID {
-                //add new data on top of the previous data
-//                foodPrice += Int((food?.foodPrice)!)!
-//                print("\(i) foodID'li yemegin fiyati: \(foodPrice)")
-            }
-        }
     }
 }
