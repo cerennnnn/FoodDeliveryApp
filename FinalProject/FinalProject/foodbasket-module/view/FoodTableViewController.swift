@@ -25,6 +25,8 @@ class FoodTableViewController: UIViewController {
         foodTable.dataSource = self
         
         FoodBasketRouter.createModule(ref: self)
+        totalLabel.text = "0₺"
+        
     }
     
     func getTotalLabel() {
@@ -89,7 +91,9 @@ extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
                     
                     if self.foods.count == 0 {
                         let alert = UIAlertController(title: "Dikkat!", message: "Sepetinizde hiçbir ürün bulunmamaktadır.", preferredStyle: .alert)
-                        let action = UIAlertAction(title: "Tamam", style: .cancel)
+                        let action = UIAlertAction(title: "Tamam", style: .cancel) {_ in
+                            self.dismiss(animated: true)
+                        }
                         
                         alert.addAction(action)
                         

@@ -498,13 +498,13 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PFY-GK-q8C">
                                                             <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="45.666666666666664"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Noodles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQc-LK-oHk">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noodles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQc-LK-oHk">
                                                                     <rect key="frame" x="0.0" y="0.0" width="63.333333333333336" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R34-dK-PVa">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R34-dK-PVa">
                                                                     <rect key="frame" x="0.0" y="25.333333333333343" width="10" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -538,31 +538,40 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="117" translatesAutoresizingMaskIntoConstraints="NO" id="PZT-TC-AaC">
-                                <rect key="frame" x="58.333333333333343" y="728" width="276.33333333333326" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kX-fI-BN6">
+                                <rect key="frame" x="0.0" y="683" width="393" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iur-Hu-5eK">
-                                        <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="30"/>
+                                        <rect key="frame" x="80" y="30" width="71.333333333333314" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="pageControlSelected"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 21.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rt8-1p-fQt">
-                                        <rect key="frame" x="188.33333333333331" y="0.0" width="88" height="30"/>
+                                        <rect key="frame" x="225" y="30" width="88" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="pageControlSelected"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" name="loginButtonBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="iur-Hu-5eK" firstAttribute="leading" secondItem="1kX-fI-BN6" secondAttribute="leading" constant="80" id="Bnq-Go-h3C"/>
+                                    <constraint firstAttribute="bottom" secondItem="iur-Hu-5eK" secondAttribute="bottom" constant="40" id="cph-yM-NRP"/>
+                                    <constraint firstAttribute="trailing" secondItem="rt8-1p-fQt" secondAttribute="trailing" constant="80" id="fF0-Fy-fw9"/>
+                                    <constraint firstAttribute="bottom" secondItem="rt8-1p-fQt" secondAttribute="bottom" constant="40" id="sfZ-Fz-YPn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RYR-oU-afg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1kX-fI-BN6" firstAttribute="trailing" secondItem="RYR-oU-afg" secondAttribute="trailing" id="10c-nb-7c5"/>
+                            <constraint firstItem="1kX-fI-BN6" firstAttribute="leading" secondItem="RYR-oU-afg" secondAttribute="leading" id="25u-7q-zz0"/>
+                            <constraint firstItem="1kX-fI-BN6" firstAttribute="bottom" secondItem="dvF-WW-JEy" secondAttribute="bottom" id="N85-gP-QO6"/>
                             <constraint firstItem="RYR-oU-afg" firstAttribute="bottom" secondItem="CJN-QU-UAk" secondAttribute="bottom" constant="100" id="W3C-hH-SDa"/>
-                            <constraint firstItem="RYR-oU-afg" firstAttribute="bottom" secondItem="PZT-TC-AaC" secondAttribute="bottom" constant="25" id="a1o-UU-3qT"/>
-                            <constraint firstItem="PZT-TC-AaC" firstAttribute="centerX" secondItem="dvF-WW-JEy" secondAttribute="centerX" id="c3T-kl-BXk"/>
                             <constraint firstItem="RYR-oU-afg" firstAttribute="trailing" secondItem="CJN-QU-UAk" secondAttribute="trailing" id="eJa-64-uLI"/>
+                            <constraint firstItem="1kX-fI-BN6" firstAttribute="top" secondItem="CJN-QU-UAk" secondAttribute="bottom" id="gkR-ro-KOp"/>
                             <constraint firstItem="CJN-QU-UAk" firstAttribute="leading" secondItem="RYR-oU-afg" secondAttribute="leading" id="hu6-tX-hok"/>
                             <constraint firstItem="CJN-QU-UAk" firstAttribute="top" secondItem="RYR-oU-afg" secondAttribute="top" id="kYw-2c-HZ7"/>
                         </constraints>
@@ -605,12 +614,12 @@
                                     <action selector="loginButtonPressed:" destination="z5s-Mv-VvQ" eventType="touchUpInside" id="3si-vI-52C"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="c@gmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5es-xJ-DH3">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5es-xJ-DH3">
                                 <rect key="frame" x="30" y="455" width="333" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="111111" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P8d-eG-eyc">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P8d-eG-eyc">
                                 <rect key="frame" x="30" y="539" width="333" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
@@ -850,7 +859,7 @@
             <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="pageControl">
-            <color red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.87800002098083496" green="0.87800002098083496" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="pageControlSelected">
             <color red="0.25900000333786011" green="0.25900000333786011" blue="0.25900000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
