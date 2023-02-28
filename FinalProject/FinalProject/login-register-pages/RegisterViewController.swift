@@ -42,18 +42,20 @@ class RegisterViewController: UIViewController {
                         if let e = error {
                                     let err = e as NSError
                                     switch err.code {
-                                    case AuthErrorCode.wrongPassword.rawValue:
-                                        self.message = "Yanlış şifre girdiniz!"
+                                    case AuthErrorCode.emailAlreadyInUse.rawValue:
+                                        self.message = "Bu e-posta adresi zaten kullanılıyor, lütfen başka bir e-posta giriniz."
                                     case AuthErrorCode.invalidEmail.rawValue:
-                                        self.message = "Geçersiz e-mail adresi!"
+                                        self.message = "Geçersiz e-posta adresi!"
                                     case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
-                                        self.message = "Bu e-mail çoktan alınmış!"
+                                        self.message = "Bu e-posta çoktan alınmış!"
+                                    case AuthErrorCode.weakPassword.rawValue:
+                                        self.message = "lütfen daha güçlü bir şifre giriniz!"
                                     default:
                                         self.message = "Bilgileriniz hatalı, lütfen kontrol edip tekrar deneyiniz."
                                         print("unknown error: \(err.localizedDescription)")
                                     }
                             
-                            let alert = UIAlertController(title: "Hata", message: self.message, preferredStyle: .alert)
+                            let alert = UIAlertController(title: "Hata!", message: self.message, preferredStyle: .alert)
                             let OKButton = UIAlertAction(title: "Tamam", style: .default)
 
                             alert.addAction(OKButton)

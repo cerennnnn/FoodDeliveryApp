@@ -45,11 +45,11 @@ class LoginViewController: UIViewController {
                                 let err = e as NSError
                                 switch err.code {
                                 case AuthErrorCode.wrongPassword.rawValue:
-                                    self?.message = "Yanlış şifre girdiniz!"
+                                    self?.message = "Girilen şifre hatalı!!"
                                 case AuthErrorCode.invalidEmail.rawValue:
-                                    self?.message = "Geçersiz e-mail adresi!"
-                                case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
-                                    self?.message = "Bu e-mail çoktan alınmış!"
+                                    self?.message = "Girilen e-posta adresi geçersiz!"
+                                case AuthErrorCode.missingEmail.rawValue:
+                                    self?.message = "E-posta alanı boş!"
                                 default:
                                     print("unknown error: \(err.localizedDescription)")
                                 }

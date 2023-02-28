@@ -17,6 +17,7 @@ class FoodTableViewController: UIViewController {
     var response: FoodOrders?
     var foods = [FoodOrders]()
     var foodBasketPresenterObject: ViewToPresenterFoodBasketProtocol?
+    var activityIndicator = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,11 @@ class FoodTableViewController: UIViewController {
         
         FoodBasketRouter.createModule(ref: self)
         totalLabel.text = "0₺"
+        
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(activityIndicator)
+        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
     }
     
@@ -84,8 +90,10 @@ extension FoodTableViewController: UITableViewDelegate, UITableViewDataSource {
                 alert.addAction(cancelAction)
                 
                 let yesAction = UIAlertAction(title: "Evet", style: .destructive) { action in
+                    
                     self.foodBasketPresenterObject?.deleteFood(sepet_yemek_id: food.basketFoodID!, kullanici_adi: username!)
                     self.foods.remove(at: indexPath.row)
+                    self.foodTable.deleteRows(at: [indexPath], with: .top)
                     self.getTotalLabel()
                     tableView.reloadData()
                     
