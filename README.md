@@ -14,12 +14,10 @@
 - CLTypingLabel
 
 
-![combine_images](https://user-images.githubusercontent.com/97634053/221689082-0cac89fb-6c5f-43ec-97cc-5895f3acabfb.jpg)
+<img width="945" alt="Ekran Resmi 2023-02-28 12 38 33" src="https://user-images.githubusercontent.com/97634053/221814656-0b6bc4a9-bf3d-4a1f-bf36-30f865c07a96.png">
 
-![combine_images-2](https://user-images.githubusercontent.com/97634053/221690009-7568ee41-5ec4-4197-9386-45c0254b2b04.jpg)
+<img width="956" alt="Ekran Resmi 2023-02-28 12 39 51" src="https://user-images.githubusercontent.com/97634053/221814767-40d0998f-ff06-4789-96f4-5d42ed7b2f9b.png">
 
-![combine_images-3](https://user-images.githubusercontent.com/97634053/221690262-98bfd57f-5cd2-4af1-84bb-bdcba127558e.jpg)
+<img width="941" alt="Ekran Resmi 2023-02-28 12 40 28" src="https://user-images.githubusercontent.com/97634053/221814849-0741d7b0-a964-4231-8c4d-a9144725d5b6.png">
 
-![combine_images-4](https://user-images.githubusercontent.com/97634053/221690492-5c857381-06f6-478d-9c66-1bc15d7431e1.jpg)
-
-![combine_images-5](https://user-images.githubusercontent.com/97634053/221690669-353a7d24-437b-4dc2-a05f-6f171a97454d.jpg)
+<img width="972" alt="Ekran Resmi 2023-02-28 12 42 02" src="https://user-images.githubusercontent.com/97634053/221814910-2124c601-8f6d-4a90-940f-26ec1298623e.png">
