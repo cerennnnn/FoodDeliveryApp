@@ -24,7 +24,9 @@
 <img width="972" alt="Ekran Resmi 2023-02-28 12 42 02" src="https://user-images.githubusercontent.com/97634053/221814910-2124c601-8f6d-4a90-940f-26ec1298623e.png">
 
 
-https://user-images.githubusercontent.com/97634053/224562989-980b77bb-848e-4f61-9733-6adc039505bc.mov  https://user-images.githubusercontent.com/97634053/224563027-bbc83cad-22fe-4ce5-990a-73d1ec4dc8ce.mov https://user-images.githubusercontent.com/97634053/224563129-1c2e83ad-20fd-4147-8d5d-0bd9123ec140.mov
+https://user-images.githubusercontent.com/97634053/224562989-980b77bb-848e-4f61-9733-6adc039505bc.mov  
+https://user-images.githubusercontent.com/97634053/224563027-bbc83cad-22fe-4ce5-990a-73d1ec4dc8ce.mov 
+https://user-images.githubusercontent.com/97634053/224563129-1c2e83ad-20fd-4147-8d5d-0bd9123ec140.mov
 
 
 
