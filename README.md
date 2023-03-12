@@ -22,3 +22,9 @@
 <img width="941" alt="Ekran Resmi 2023-02-28 12 40 28" src="https://user-images.githubusercontent.com/97634053/221814849-0741d7b0-a964-4231-8c4d-a9144725d5b6.png">
 
 <img width="972" alt="Ekran Resmi 2023-02-28 12 42 02" src="https://user-images.githubusercontent.com/97634053/221814910-2124c601-8f6d-4a90-940f-26ec1298623e.png">
+
+
+https://user-images.githubusercontent.com/97634053/224562989-980b77bb-848e-4f61-9733-6adc039505bc.mov
+
+https://user-images.githubusercontent.com/97634053/224563027-bbc83cad-22fe-4ce5-990a-73d1ec4dc8ce.mov
+
